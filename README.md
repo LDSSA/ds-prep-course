@@ -1,12 +1,10 @@
-# Batch 3 Students Repository
+# Data Science Prep Course Repository
 
-Welcome to Lisbon Data Science Academy Batch 3 Students repository. The presentation used at the introduction of
-the bootcamp is [here](https://docs.google.com/presentation/d/1uMTbu7vRd0tYEp2ksOqRZyLefPEBB_0-pvanLtAOhjk/edit?usp=sharing).
-
-Here is you'll find all information needed to setup your environment and the
-workflow you'll use during the academy.
+Welcome to Data Science Prep Course repository. Here is you'll find all information needed to setup your environment and the
+workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
+    1. [Install Windows Subsystem for Linux/VMware](#setup-operating-system)
     1. [Setup _Git_/_GitHub_](#setup-_git__github_)
     1. [Install _Anaconda_](#install-_anaconda_)
     1. [Setup your Workspace Repository](#setup-your-workspace-repository)
@@ -16,13 +14,8 @@ workflow you'll use during the academy.
 1. [Updates to Learning Units](#updates-to-learning-units)
 1. [Help](#help)
     1. [Learning Unit](#learning-unit-workflow)
-    1. [_Portal_](#_portal_)
     1. [Other](#other)
 
-There is also a screencast to accompany this readme. Please note that there is one known issue so far in the screencast
-in that the clone of the batch3-students needs to be done by URL (as is shown in this README) and not by filter.
-
-[![screencast](https://img.youtube.com/vi/6cHRO-ab_L4/0.jpg)](https://www.youtube.com/watch?v=6cHRO-ab_L4)
 
 ## Initial Setup
 
@@ -30,13 +23,20 @@ in that the clone of the batch3-students needs to be done by URL (as is shown in
 Before the bootcamp you will have to complete these instructions, this is 
 essential.
 
-Once you complete the setup mark yourself as such on [this spreadsheet](https://docs.google.com/spreadsheets/d/1bEOwvEmEJONYzW94efixHa8Te8I_QKC91m8WPoADxjY/edit?usp=sharing).
+Once you complete the setup mark yourself as such on [this spreadsheet](CREATE A SPREADSHEET WITH STUDENTS' NAMES).
+Make sure that you complete the setup by the 30th of March, as the course will begin on that day. If you are struggling to install any of the software to be mentioned below, tell us ASAP! The course by itself will be very intensive, so we do not want to you waste 5 hours on the setting up part!! 
 
 By completing this you will setup and learn about all the tools you'll be
-using during the academy.
-We will also be able to identify any problems in time to figure out a solution.
+using during the academy. We will also be able to identify any problems in time to figure out a solution.
+
+
+### Install Windows Subsystem for Linux/VMware
+
+COPY/PASTE FROM INSTRUCTOR README
 
 ### Setup _Git_/_GitHub_
+
+CHANGE SCREENSHOT INTO PREP COURSE-SPECIFIC REPO
 
 Having a _GitHub_ account and knowing the basics of committing and pushing 
 changes are mandatory.
@@ -52,23 +52,10 @@ If you plan on using the terminal and not _GitHub_ desktop it might be a good
 idea to [set up ssh keys](https://help.github.com/articles/connecting-to-github-with-ssh/)
 for _GitHub_.
 
-### Install _Anaconda_
+### Install packages for each SLU
 
-The work you will be doing during the academy makes use of packages to provide
-extra functionality.
-Installing and managing different versions (that may have subtle changes)
-in different operating systems and ensuring everyone gets the same results
-is a challenging task.
-_Anaconda_ is currently the best solution for this problem.
+HOW TO INSTALL REQUIREMENTS.TXT USING PIP
 
-Go to [_Anaconda_](https://www.anaconda.com/distribution/) for installation 
-instructions. **BE SURE to choose "Python 3.7 version".**
-
-**If you are on windows**
-
-Make sure that there are no non-english characters in your username or on the 
-path and that you have qt installed. [Here is a reference](https://github.com/ContinuumIO/anaconda-issues/issues/1270) 
-on how to address these issues.
 
 ### Setup your Workspace Repository
 
@@ -77,6 +64,8 @@ In this academy that is a requirement as it is how you will make your work
 available to us.
 
 #### Creating the Workspace
+
+CHANGE THIS PART INTO CLONING THE REPO
 
 1. Log into _GitHub_
 1. Create a new **private** _GitHub_ repository called *batch3-workspace*, see 
@@ -99,25 +88,6 @@ If you name it anything else, you will be unable to submit any of your work!
 
 ![Create Repository](assets/create_repository.png "Create Repository")
 
-#### Add a Deploy Key to your Repository
-
-Since the repository is private you will have to explicitly give access so
-that our grading system can fetch the repository.
-To do this you will be adding a deploy key to the repository, which we
-provide to you in our [_Portal_](https://portal.lisbondatascience.org/).
-
-1. Head on to the [_Portal_](https://portal.lisbondatascience.org/)
-1. Log in with your _GitHub_ account
-1. Go to your [profile](https://portal.lisbondatascience.org/users/info/) and 
-copy the deploy key
-![Profile](assets/profile.png "Profile")
-1. Go back to the repository you have just created
-1. Go back to the repository you have just created
-1. Go to `Settings > Deploy Keys`
-1. Click "Add deploy key"
-1. Give it a recognizable name like "grader" and paste the key from the 
-_Portal_
-![Deploy keys](assets/deploy_key.png "Deploy key")
 
 #### Cloning the Workspace
 
@@ -390,29 +360,8 @@ material please follow [these steps](https://github.com/LDSSA/wiki/wiki/How-to-a
 If you have more conceptual questions about the materials or how to approach a problem you can also
 reach out to the instructors on slack.
 You can find the main contact for the learning unit in the
-[_Portal_](https://portal.lisbondatascience.org/) this instructor can help you
-out or redirect you to someone that is available at the moment.
+[_XXXX) this instructor can help you out or redirect you to someone that is available at the moment.
 
-### _Portal_
-
-Are you getting different results locally than what you are getting in the 
-_Portal_?
-If so we will first ask to do a bit of troubleshooting.
-1. Ensure that you have saved the changes in the notebook
-1. Ensure that you have committed and pushed the changes
-1. Ensure that you are not using packages that are not present in the original
-`environment.yml` file (changes to this file or your local environment have no
-effect)
-1. In the learning unit page in the [_Portal_](https://portal.lisbondatascience.org/)
-you are able to download the exercise notebook with the results of the grader
-by clicking your grade, have a look to figure out what went wrong.
-![Download notebook](assets/portal_download_notebook.png "Download notebook")
-If none of these steps helped go ahead and open a support ticket for the portal
-[here](https://github.com/LDSSA/batch3-portal-support).
-
-Is the _Portal_ down or acting out in some unexpected way?
-Then please open a support ticket for the portal
-[here](https://github.com/LDSSA/batch3-portal-support).
 
 ### Other
 
