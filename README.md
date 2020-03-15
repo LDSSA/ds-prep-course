@@ -4,12 +4,11 @@ Welcome to Data Science Prep Course repository. Here is you'll find all informat
 workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
-    1. [Install Windows Subsystem for Linux/VMware](#setup-operating-system)
+    1. [Windows Setup](#setup-operating-system)
     1. [Setup _Git_/_GitHub_](#setup-_git__github_)
-    1. [Install _Anaconda_](#install-_anaconda_)
     1. [Setup your Workspace Repository](#setup-your-workspace-repository)
     1. [Get the Learning Material](#get-the-learning-material)
-    1. [Running and Submitting a Learning Unit](#running-and-submitting-a-learning-unit)
+    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit)
 1. [Learning Unit Workflow](#learning-unit-workflow)
 1. [Updates to Learning Units](#updates-to-learning-units)
 1. [Help](#help)
@@ -30,7 +29,12 @@ By completing this you will setup and learn about all the tools you'll be
 using during the academy. We will also be able to identify any problems in time to figure out a solution.
 
 
-### Install Windows Subsystem for Linux/VMware
+### Windows Setup
+
+This section deals with setting up either Windows Subsystem for Linux (WSL)
+or VMWare. 
+If you are using MacOS or Linux you can skip this section.
+
 
 COPY/PASTE FROM INSTRUCTOR README
 
@@ -51,11 +55,6 @@ already have one.
 If you plan on using the terminal and not _GitHub_ desktop it might be a good
 idea to [set up ssh keys](https://help.github.com/articles/connecting-to-github-with-ssh/)
 for _GitHub_.
-
-### Install packages for each SLU
-
-HOW TO INSTALL REQUIREMENTS.TXT USING PIP
-
 
 ### Setup your Workspace Repository
 
@@ -91,18 +90,6 @@ If you name it anything else, you will be unable to submit any of your work!
 
 #### Cloning the Workspace
 
-###### Using _GitHub Desktop_
-
-1. Click "Clone a repository from the internet..." or select 
-"File > Clone repository" on the menubar if this not your first time
-![Clone first time](assets/clone_first_time.png "Clone first time")
-![Clone menubar](assets/clone.png "Clone form the menubar")
-1. Filter by "batch3-workspace"
-![Clone filter](assets/clone_workspace_filter.png "Clone filter")
-1. Select and clone
-
-###### Using the terminal
-
 1. Open a Terminal or Git Bash, the next steps are on this terminal
 1. Clone your _<username>/batch3-workspace_ repository
 ```bash
@@ -121,16 +108,6 @@ repository.
 All of the learning material you need will be made available on this repo
 as the academy progresses.
 
-###### Using _GitHub Desktop_
-
-1. Select "File > Clone repository" on the menubar
-![Clone menubar](assets/clone.png "Clone form the menubar")
-1. Select by URL "ldssa/batch3-students"
-![Select by URL](assets/select-by-url.png "Select by URL")
-1. Select and press clone
-
-###### Using the terminal
-
 1. Open a Terminal or Git Bash, the next steps are on this terminal
 1. Clone the students repository 
 [batch3-students](https://github.com/LDSSA/batch3-students)
@@ -143,7 +120,7 @@ Or if you have your ssh keys set up:
 git clone git@github.com:LDSSA/batch3-students.git
 ```
 
-### Running and Submitting a Learning Unit
+### Running Learning Unit
 
 In the `batch3-students` repository that you just cloned there is a sample
 learning unit.
@@ -165,31 +142,9 @@ All learning units are organized as:
 Doing so will help you keep organized and ease copying data from the students
 repository to yours.
 
-#### Creating a Conda Environment
+#### Creating Python Virtual Environment
 
-With each learning unit you will be provided with an `environment.yml` file.
-It tells _Anaconda_ all the packages the learning unit depends on and it
-will be used to create an _Anaconda_ environment.
-
-An environment is simply an isolated set of packages. 
-When you run your code inside an environment you will have access to the 
-same version of the packages the instructor used to create the notebooks.
-
-###### Using the Graphical Interface
-
-1. Select "Environments"
-1. Select "Import"
-![Select environment](assets/anaconda_environment.png "Select environment")
-1. Set `slu00` for the name and select the `environment.yml` file in the 
-learning unit directory (the one in your `batch3-workspace`).
-![Create environment](assets/anaconda_create.png "Create environment")
-
-###### Using the Terminal
-
-```bash
-cd batch3-workspace/sample/SLU00\ -\ LU\ Tutorial
-conda env create -n slu00 --file environment.yml
-```
+TODO
 
 #### Working on the Learning Unit
 
@@ -207,14 +162,6 @@ It will give you a handle on what to expect and what rules the instructors
 follow (and the effort they put) when creating a learning unit.
 
 So let's start the Jupyter Notebook app.
-
-###### Using the Graphical Interface
-
-1. Click the play button next to the newly created environment and select
-"Open with Jupyter Notebook"
-![Anaconda Jupyter](assets/anaconda_jupyter.png "Anaconda Jupyter")
-
-###### Using the Terminal
 
 1. Activate the environment and run jupyter notebook
 ```bash
@@ -258,13 +205,6 @@ changes.
 It's time to commit the changes, which just means adding them to your `batch3-workspace`
 repository history, and pushing this history to you remote on _GitHub_.
 
-###### Using _GitHub Desktop_
-
-1. Use the _GitHub Desktop_ application commit the changes and push
-![GitHub commit](assets/github_desktop_commit.png "GitHub commit")
-
-###### Using the terminal
-
 1. Using the terminal commit and push the changes
 ```bash
 git add .
@@ -272,41 +212,12 @@ git commit -m 'Testing the sample notebook'
 git push
 ```
 
-##### Some Advice
-
-Our advice it to get comfortable with _git_, commit often and create branches 
-to try different solutions and once you're ready merge everything back to
-the `master` branch.
-Having all of the iterations will help you keep track of your work.
-
-Here is a recommendation for a _git_ workflow, if you are not comfortable you
-don't need to use it (but using it _will_ make you comfortable).
-1. Create a branch for the learning unit you're working on e.g. `slu00`
-1. Copy the files and commit
-1. Work a bit and commit, start the commit message with WIP (work in progress)
-1. Once you are ready checkout the `master` branch and merge the `slu00` branch
-into it
-1. Push the changes
-
-#### Grading
-
-1. Go to the [_Portal_](https://portal.lisbondatascience.org) and select the learning unit
-![Learning unit](assets/portal_sample_lu.png "Learning unit")
-1. Select "Grade"
-![Grade](assets/portal_grade.png "Grade")
-1. After grading is complete you should have 20/20 
-1. If everything passes locally but the grader doesn't give you the excepted 
-output head to out [troubleshooting](#_portal_)
-1. Once you have your grade don't forget to do the 
-[spreadsheet](https://docs.google.com/spreadsheets/d/1bEOwvEmEJONYzW94efixHa8Te8I_QKC91m8WPoADxjY/edit?usp=sharing) thing.
-
 ## Learning Unit Workflow
 
 Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
 [batch3-students](https://github.com/LDSSA/batch3-students) 
-repository and submissions are open in the 
-[_Portal_](https://portal.lisbondatascience.org).
+repository.
 
 The steps you followed during the initial setup are exactly what you are going
 to be doing for each new learning unit.
@@ -316,8 +227,6 @@ Here's a quick recap:
 1. Copy the unit to your `batch3-workspace` repo
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
-1. Go to the [_Portal_](https://portal.lisbondatascience.org), select the learning unit you're working on and click  "Grade"
-1. Refresh the page until you get the results back
 1. Profit
 
 ## Updates to Learning Units
@@ -341,10 +250,7 @@ At the moment our suggestion to merge the changes is:
 1. Copy the new exercise notebook over
 1. Open both and copy paste your solutions to the new notebook
 
-We understand it's not ideal and are working on improving this workflow using
-[_nbdime_](https://nbdime.readthedocs.io/).
-If you are comfortable installing _Python_ packages you can try it out, but
-we offer no support for this at the moment.
+We understand it's not ideal and are working on improving this workflow.
 
 ## Help
 
