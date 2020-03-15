@@ -4,17 +4,16 @@ Welcome to Data Science Prep Course repository. Here is you'll find all informat
 workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
-    1. [Windows Setup](#setup-operating-system)
-    1. [Setup _Git_/_GitHub_](#setup-_git__github_)
-    1. [Setup your Workspace Repository](#setup-your-workspace-repository)
-    1. [Get the Learning Material](#get-the-learning-material)
-    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit)
-1. [Learning Unit Workflow](#learning-unit-workflow)
-1. [Updates to Learning Units](#updates-to-learning-units)
-1. [Help](#help)
-    1. [Learning Unit](#learning-unit-workflow)
-    1. [Other](#other)
-
+    1. [Windows Setup](#Windows-Setup) Miguel (up for review)
+    1. [Setup _Git_/_GitHub_](#setup-_git__github_) Hugo
+    1. [Setup your Workspace Repository](#setup-your-workspace-repository) Hugo
+    1. [Get the Learning Material](#get-the-learning-material) Hugo
+    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit) Hugo
+1. [Learning Unit Workflow](#learning-unit-workflow) Hugo
+1. [Updates to Learning Units](#updates-to-learning-units) Miguel (up for review)
+1. [Help](#help) Miguel
+    1. [Learning Unit Workflow](#learning-unit-workflow) Miguel
+    1. [Other](#other) Miguel (up for review)
 
 ## Initial Setup
 
@@ -35,8 +34,12 @@ This section deals with setting up either Windows Subsystem for Linux (WSL)
 or VMWare. 
 If you are using MacOS or Linux you can skip this section.
 
+Follow [this guide](guides/Windows_Subsystem_for_Linux_Installation_Guide_for_Windows_10.md) if you are running Windows 10.
 
-COPY/PASTE FROM INSTRUCTOR README
+If you are running Windows 7, follow the guide bellow on running Ubuntu with Windows 7 with VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided bellow.
+* [VMware download link](https://www.vmware.com/go/getplayer-win)
+* [Ubuntu download link](https://ubuntu.com/download/desktop/thank-you?version=18.04.4&architecture=amd64)
+* Follow this guide: [How To Run Ubuntu in Windows 7 with VMware Player](https://www.howtogeek.com/howto/11287/how-to-run-ubuntu-in-windows-7-with-vmware-player/)
 
 ### Setup _Git_/_GitHub_
 
@@ -234,15 +237,11 @@ Here's a quick recap:
 As much as we try and have processes in place to prevent errors and bugs in 
 the learning units some make it through to you.
 If the problem is not in the exercise notebook you can just pull the new 
-version from the students repo and replace the file.
+version from the ds-prep-course repo and replace the file.
 The problem is if the correction is in the exercise notebook, you can't just
-replace the file your work is there and you'll lose it!
+replace the file because your work is there and you'll lose it!
 
-When a new version of the exercise notebook is released (and announced) two
-things will happen.
-If you submit an old version of the notebook it will be flagged as out of date
-and not graded.
-You will have to merge the work you've already done into the new version of the
+When a new version of the exercise notebook is released (and announced) you will have to merge the work you've already done into the new version of the
 notebook.
 
 At the moment our suggestion to merge the changes is: 
@@ -254,7 +253,7 @@ We understand it's not ideal and are working on improving this workflow.
 
 ## Help
 
-During the academy you will surely run into problems and have doubts about the
+During the prep-course you will surely run into problems and have doubts about the
 material.
 We provide you with some different channels to ask for help.
 
