@@ -34,7 +34,7 @@ This section deals with setting up either Windows Subsystem for Linux (WSL)
 or VMWare. 
 If you are using MacOS or Linux you can skip this section.  
 
-If you are using windows 10 we suggest using WSL (see bellow), if you are using an older Windows version we also support running a virtual linux machine with WMWare.
+If you are using windows 10 we suggest using WSL (see bellow), if you are using an older Windows version we also support running a virtual linux machine with VMWare.
 
 #### Windows 10 Setup
 
