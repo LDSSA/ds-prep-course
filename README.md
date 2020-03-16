@@ -94,22 +94,29 @@ keeping the default values.
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
+**IMPORTANT** MacOS folks have an extra step described
+[here](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
+
 Will be required to copy the public key you have just
 generated to your _GitHub_ account.
 Run `cat ~/.ssh/id_rsa.pub` in a terminal, this is your public key.
 Copy the output, you will need it later.
 
 In the upper left corner of the page click your profile and then settings.
+
 ![Settings](assets/userbar-account-settings.png)
 
 Then in the sidebar click _SSH and GPG Keys_.
+
 ![SSH and GPG](assets/userbar-account-settings.png)
 
 And _New SSH key_ or _Add SSH key_.
+
 ![New Key](assets/ssh-add-ssh-key.png)
 
 In the "Title" field, add a descriptive label for the new key.
 And paste the output of you public key in the _Key_ field.
+
 ![Paste key](assets/ssh-key-paste.png)
 
 Finally press _Add SSH Key_, you may have to confirm your password.
@@ -136,21 +143,26 @@ are working on.
 #### Cloning the Workspace
 
 1. Open a Terminal
-1. Chose where you want to keep your project, if for example you want to keep
-it in a directory called _Projects_ you would do the following.
+1. Chose where you want to keep your project. 
+If for example you want to keep it in a directory called _Projects_ 
+you would first create the directory using the `mkdir` command and then change
+the directory you are in with `cd`.
+You can check if you are in the correct directory with `pwd`.
+In this example this would be:
 ```bash
 mkdir Projects
 cd Projects
+pwd
 ```
-1. Go to the directory where your project will reside,  
-1. Clone your _<username>/ds-prep-workspace_ repository
+1. You can now clone (retrieve from _GitHub_)  your 
+_<username>/ds-prep-workspace_ repository.
 ```bash
 git clone git@github.com:<username>/ds-prep-workspace.git
 ```
 
 ### Get the Learning Material
 
-You will be cloning the [ds-prep-course](https://github.com/LDSSA/ds-prep-students) 
+You will be cloning the [ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.
 All of the learning material you need will be made available on this repo
 as the academy progresses.
@@ -175,6 +187,14 @@ So go ahead and copy the sample directory `sample/SLU00 - LU Tutorial` from the 
 ds-prep` repository to your repository (named `ds-prep-workspace`).
 ![Sample learning unit](assets/sample_learning_unit.png "Sample learning unit")
 
+If you have both the `ds-course-prep` and `ds-course-workspace` in a
+_Projects_ directory you could do it using the commandline like this:
+```bash
+cd Projects
+mkdir "ds-prep-workspace/sample"
+cp -r "ds-prep-course/sample/SLU00 - LU Tutorial" "ds-prep-workspace/sample"
+```
+
 All learning units are organized as: 
 ```
 Week <#>/<learning unit ID> - <learning unit name>
@@ -195,7 +215,7 @@ cd "Projects/ds-prep-workspace/sample/SLU00 - LU Tutorial"
 ```
 1. Create the environment
 ```bash
-python -m venv env
+python3 -m venv env
 ```
 
 #### Working on the Learning Unit
