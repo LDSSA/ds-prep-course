@@ -3,18 +3,18 @@
 Welcome to Data Science Prep Course repository. Here is you'll find all information needed to setup your environment and the
 workflow you'll use during the Prep Course.
 
-1. [Initial Setup](#initial-setup) (up for review)
-    1. [Windows Setup](#Windows-Setup) Miguel (up for review)
-    1. [Setup _Git_/_GitHub_](#setup-_git__github_) Hugo
-    1. [Setup your Workspace Repository](#setup-your-workspace-repository) Hugo
-    1. [Get the Learning Material](#get-the-learning-material) Hugo
-    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit) Hugo
-1. [Learning Unit Workflow](#learning-unit-workflow) Hugo
-1. [Updates to Learning Units](#updates-to-learning-units) Miguel (up for review)
-1. [Help](#help) Miguel
-    1. [Slack Usage](#slack-usage) Miguel
-    1. [How to Ask For Help](#How-to-Ask-For-Help) Miguel
-    1. [Other](#other) Miguel (up for review)
+1. [Initial Setup](#initial-setup)
+    1. [Windows Setup](#Windows-Setup)
+    1. [Setup _Git_/_GitHub_](#setup-_git__github_)
+    1. [Setup your Workspace Repository](#setup-your-workspace-repository)
+    1. [Get the Learning Material](#get-the-learning-material)
+    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit)
+1. [Learning Unit Workflow](#learning-unit-workflow)
+1. [Updates to Learning Units](#updates-to-learning-units)
+1. [Help](#help)
+    1. [Slack Usage](#slack-usage)
+    1. [How to Ask For Help](#How-to-Ask-For-Help)
+    1. [Other](#other)
 
 ## Initial Setup
 
@@ -32,11 +32,17 @@ using during the academy. We will also be able to identify any problems in time 
 
 This section deals with setting up either Windows Subsystem for Linux (WSL)
 or VMWare. 
-If you are using MacOS or Linux you can skip this section.
+If you are using MacOS or Linux you can skip this section.  
+
+If you are using windows 10 we suggest using WSL (see bellow), if you are using an older Windows version we also support running a virtual linux machine with WMWare.
+
+#### Windows 10 Setup
 
 Follow [this guide](guides/Windows_Subsystem_for_Linux_Installation_Guide_for_Windows_10.md) if you are running Windows 10.
 
-If you are running Windows 7, follow the guide bellow on running Ubuntu with Windows 7 with VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided bellow (not the links provided in the tutorial).
+#### Older Windows Setup
+
+If you are running an older version of Windows, follow the guide bellow on running Ubuntu with Windows using VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided bellow (not the links provided in the tutorial).
 * [VMware download link](https://www.vmware.com/go/getplayer-win)
 * [Ubuntu download link](https://ubuntu.com/download/desktop/thank-you?version=18.04.4&architecture=amd64)
 * Follow this guide: [How To Run Ubuntu in Windows 7 with VMware Player](https://www.howtogeek.com/howto/11287/how-to-run-ubuntu-in-windows-7-with-vmware-player/)

@@ -47,7 +47,7 @@ and run it by pressing <kbd>enter</kbd>:
 
 
 ## Launch a distro
-To complete the initialization of your newly installed distro, launch a new instance. You can do this by y typing "PowerShell" in your windows search bar 
+To complete the initialization of your newly installed distro, launch a new instance. You can do this by typing "ubuntu" in your windows search bar 
 
 ![start](assets/start.png)
 
@@ -98,7 +98,17 @@ sudo apt update && sudo apt upgrade
 If you’d like to use Windows File Explorer to manipulate the files in WSL, just type this in the WSL terminal:
 
 ```console
-mig@MacBook-Pro$ explorer.exe .
+mig@DESKTOP-GKLQ11P$ explorer.exe .
 ```
 
-## You're all set! 
+## You're all set!  
+
+Whenever you want to use WSL, just type "ubuntu" in your windows search bar 
+
+![start](assets/start.png)
+
+![start](assets/open_ubuntu.png)
+
+Then a terminal window will open that allows you to interact with Ubuntu.
+
+![Ubuntu unpacking in the Windows console](assets/orange_circle.png)
