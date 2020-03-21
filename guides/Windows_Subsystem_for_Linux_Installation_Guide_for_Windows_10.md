@@ -100,12 +100,19 @@ If you’d like to use Windows File Explorer to manipulate the files in WSL, jus
 ```console
 mig@DESKTOP-GKLQ11P$ explorer.exe .
 ```
+The Windows Explorer should pop up:
+
+![start](assets/windows_explorer.png)
+
+Keep in mind that you should manipulate files and create directories inside your `Ubuntu-18.04/home/<your name>` folder.
 
 ## You're all set!  
 
 Whenever you want to use WSL, just type "ubuntu" in your windows search bar 
 
 ![start](assets/start.png)
+
+Open it:
 
 ![start](assets/open_ubuntu.png)
 

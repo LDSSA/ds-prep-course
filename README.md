@@ -4,11 +4,11 @@ Welcome to Data Science Prep Course repository. Here is you'll find all informat
 workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
-    1. [Windows Setup](#setup-operating-system)
+    1. [Windows Setup](#Windows-Setup)
     1. [Setup _Git_/_GitHub_](#setup-_git__github_)
     1. [Setup your Workspace Repository](#setup-your-workspace-repository)
     1. [Get the Learning Material](#get-the-learning-material)
-    1. [Running a Learning Unit](#running-and-submitting-a-learning-unit)
+    1. [Running a Learning Unit](#Running-a-Learning-Unit)
 1. [Learning Unit Workflow](#learning-unit-workflow)
 1. [Updates to Learning Units](#updates-to-learning-units)
 1. [Help](#help)
@@ -39,15 +39,22 @@ This section deals with setting up either Windows Subsystem for Linux (WSL)
 or VMWare. 
 If you are using MacOS or Linux you can skip this section.  
 
-If you are using windows 10 we suggest using WSL (see bellow), if you are using an older Windows version we also support running a virtual linux machine with VMWare.
+If you are using windows 10 we suggest using WSL (see below), if you are using an older Windows version we also support running a virtual linux machine with VMWare.
+
+##### Why do I need to install either WSL or VMware?
+
+Because of the differences in command line syntax between Windows vs Mac OS/Linux, it would be a great challenge for us to support and provide instructions for both Operating Systems. For this reason, we’d ask you to install Windows Subsystem for Linux, or VMware, which would enable you to run Linux command lines inside Windows. Keep in mind that these are simply extensions to your Windows operating system, hence, installing this software will not do any changes on your laptop. It is also quick to do so.
+ 
+If due to some reasons, you cannot install WSL or VMware (e.g. you do not have the admin rights for your computer), you can still join the Prep Course and follow the Learning materials. However, all of our setup instructions and learning materials are created for Mac OS/Linux, and unfortunately we will not be able to provide support on how to do it on Windows.
+If you have some doubts/worries, feel free to reach out to us.
 
 #### Windows 10 Setup
 
 Follow [this guide](guides/Windows_Subsystem_for_Linux_Installation_Guide_for_Windows_10.md) if you are running Windows 10.
 
-#### Older Windows Setup
+#### Older Windows Setup 
 
-If you are running an older version of Windows, follow the guide bellow on running Ubuntu with Windows using VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided bellow (not the links provided in the tutorial).
+If you are running an older version of Windows (such as Windows 8 or 7), follow the guide below on running Ubuntu with Windows using VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided below (not the links provided in the tutorial).
 * [VMware download link](https://www.vmware.com/go/getplayer-win)
 * [Ubuntu download link](https://ubuntu.com/download/desktop/thank-you?version=18.04.4&architecture=amd64)
 * Follow this guide: [How To Run Ubuntu in Windows 7 with VMware Player](https://www.howtogeek.com/howto/11287/how-to-run-ubuntu-in-windows-7-with-vmware-player/)
@@ -55,31 +62,35 @@ If you are running an older version of Windows, follow the guide bellow on runni
 ### MacOS Setup
 
 Some of the steps in the following sections will require _Homebrew_ for MacOS.
-Homebrew will make it easier to install software that we will use later on.
-Copy and paste the following line in a terminal:
+Homebrew will make it easier to install software that we will use later on.  
+To open the terminal, choose one:
+* In Finder <img src='assets/finder.png' alt='Finder' width="5%" height="5%"/>, open the /Applications/Utilities folder, then double-click Terminal.
+* By pressing <kbd>cmd</kbd> + <kbd>space</kbd> then type `terminal` and press <kbd>enter</kbd>.
+
+The terminal should now be open:
+
+![](assets/mac_terminal.png)
+
+
+Copy and paste the following line in the terminal:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 You may be offered to install the _Command Line Developers Tools_ confirm and
-once it's finished continue installing Homebrew by clicking return again.
+once it's finished continue installing Homebrew by pressing <kbd>enter</kbd> again.
 
 ### Setup _Git_/_GitHub_
 
 Git is a distributed version-control system for tracking changes in source 
-code.
-A repository is where your code will live and the changes you do tracked.
-
-If you only keep your code in your laptop any catastrophic event might cause
-you to lose all your hard work.
-So we will push all changes to a remote repository which is what we will
-use _GitHub_ for.
+code.  
+A repository is where code lives, and the code from the prep course will live in the [ds-prep-course](https://github.com/LDSSA/ds-prep-course) repository, and the learning materials and exercises will be released (made available) in that repository.
 
 #### Install Git
 
-##### Under Linux
-Open a terminal and run:
+##### Under Ubuntu
+Open a terminal (or use one you've already opened) and run:
 ```bash
-sudo apt install git
+sudo apt update && sudo apt upgrade && sudo apt install git
 ```
 
 ##### Under MacOS
@@ -92,50 +103,10 @@ brew install git
 [Sign up](https://github.com/join) for a _GitHub_ account and follow 
 instructions.
 
-#### Setup SSH Keys
-
-The next steps might seem daunting but you only need to do this once and
-believe me it will save you a lot work later.
-
-Run the following command on the command line and follow the instructions 
-keeping the default values.
-```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-
-**IMPORTANT** MacOS folks have an extra step described
-[here](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
-
-Will be required to copy the public key you have just
-generated to your _GitHub_ account.
-Run `cat ~/.ssh/id_rsa.pub` in a terminal, this is your public key.
-Copy the output, you will need it later.
-
-In the upper left corner of the page click your profile and then settings.
-
-![Settings](assets/userbar-account-settings.png)
-
-Then in the sidebar click _SSH and GPG Keys_.
-
-![SSH and GPG](assets/userbar-account-settings.png)
-
-And _New SSH key_ or _Add SSH key_.
-
-![New Key](assets/ssh-add-ssh-key.png)
-
-In the "Title" field, add a descriptive label for the new key.
-And paste the output of you public key in the _Key_ field.
-
-![Paste key](assets/ssh-key-paste.png)
-
-Finally press _Add SSH Key_, you may have to confirm your password.
-
-
 ### Setup your Workspace Repository
 
 The workspace directory/repository is where you will place everything you
 are working on.
-
 
 #### Creating the Workspace
 
@@ -148,26 +119,26 @@ are working on.
 
 ![Create Repository](assets/create_repository.png "Create Repository")
 
-
 #### Cloning the Workspace
 
-1. Open a Terminal
-1. Chose where you want to keep your project. 
-If for example you want to keep it in a directory called _Projects_ 
-you would first create the directory using the `mkdir` command and then change
-the directory you are in with `cd`.
-You can check if you are in the correct directory with `pwd`.
-In this example this would be:
+* Open a Terminal (or use one you've already opened)
+* We're going to have a folder named `projects` where we will keep the repositories we'll be using.
+* We're going to use the `mkdir` command to create it, and the `cd` command to enter the folder: 
+
 ```bash
-mkdir Projects
-cd Projects
-pwd
+mkdir ~/projects
+cd ~/projects
 ```
-1. You can now clone (retrieve from _GitHub_)  your 
-_<username>/ds-prep-workspace_ repository.
+
+* You can now clone (retrieve from GitHub) your /ds-prep-workspace repository using the `git clone` command:
+
 ```bash
 git clone git@github.com:<username>/ds-prep-workspace.git
 ```
+
+* Now type your git username, then press <kbd>enter</kbd>
+* Then type your git password , then press <kbd>enter</kbd>
+* You're all set!
 
 ### Get the Learning Material
 
@@ -176,55 +147,102 @@ repository.
 All of the learning material you need will be made available on this repo
 as the academy progresses.
 
-1. Open a Terminal
+1. Open a Terminal (or use one you've already opened)
+1. Make sure you're in the right directory (use the `cd` command to enter the `~/projects`)
 1. Clone the students repository 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-couse)
 ```bash
-cd Projects
+cd ~/projects
 git clone git@github.com:LDSSA/ds-prep-course.git
 ```
 
-### Running Learning Unit
+#### Get the Week 0 Learning Unit
 
-In the `ds-prep-course` repository that you just cloned there is a sample
+In the `ds-prep-course` repository that you just cloned there is a Week 0
 learning unit.
 It's used to give instructors guidelines to produce the learning units.
 We are also using it to ensure that you are able to run and submit a learning 
 unit.
 
-So go ahead and copy the sample directory `sample/SLU00 - LU Tutorial` from the `
-ds-prep` repository to your repository (named `ds-prep-workspace`).
-![Sample learning unit](assets/sample_learning_unit.png "Sample learning unit")
+So go ahead and copy the `Week 0` directory that contains the `SLU000 - Jupyter Notebook` from the `
+ds-prep-course` repository to your repository (named `ds-prep-workspace`).  
+
+You can do that either using the command line, or the Operating System's Graphical User Interface.
+
+##### Using the command line
 
 If you have both the `ds-course-prep` and `ds-course-workspace` in a
-_Projects_ directory you could do it using the commandline like this:
+_projects_ directory you could do it using the command line like this:
 ```bash
-cd Projects
-mkdir "ds-prep-workspace/sample"
-cp -r "ds-prep-course/sample/SLU00 - LU Tutorial" "ds-prep-workspace/sample"
+cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
 ```
 
-All learning units are organized as: 
-```
-Week <#>/<learning unit ID> - <learning unit name>
+##### Using the Operating System's Graphical User Interface
+
+* On WSL with Ubuntu:
+    * first enter the `~/projects/` directory using the `cd` command, then run `explorer.exe .` (don't forget to include the dot! the dot means "current directory") to open Windows explorer in the current directory:
+
+```bash
+cd ~/projects/ds-prep-course
+explorer.exe .
 ```
 
-#### Creating Python Virtual Environment
+Windows Explorer should pop up now:
 
-If you are using Linux you will need to install a couple of packages first,
+![Sample learning unit](assets/week_0.png "Sample learning unit")
+
+* On Mac:
+    * In Finder <img src='assets/finder.png' alt='Finder' width="5%" height="5%"/>, open the "Go" menu, choose the option "Go to folder..."
+
+![Sample learning unit](assets/go_to_folder.png "Sample learning unit")
+
+then paste the path to your workspace `~/projects/ds-prep-workspace`, then click "Go".
+
+![Sample learning unit](assets/finder_go.png "Sample learning unit")
+
+
+### Running a Learning Unit
+
+#### Creating Python Virtual Environment and installing the necessary packages
+
+If you are using Ubuntu you will need to install a couple of packages first,
 this can be done in a terminal by running:
 ```bash
-sudo apt install python3-pip python3-venv
+sudo apt update && sudo apt upgrade && sudo apt install python3-pip python3-venv
 ```
 
-1. Open a terminal
-1. Got to the workspace directory, if you are keeping the repository
+* Create a virtual environment with the name `mig-venv`
 ```bash
-cd "Projects/ds-prep-workspace/sample/SLU00 - LU Tutorial"
+python3 -m venv ~/.virtualenvs/mig-venv
 ```
-1. Create the environment
+* Activate the environment 
+
 ```bash
-python3 -m venv env
+source ~/.virtualenvs/mig-venv/bin/activate
+```
+
+Note: after you activate your virtual environment you should see at the leftmost of your command line the name of your virtual environment surrounded by parenthesis, like this:
+
+```bash
+mig@macbook-pro % source ~/.virtualenvs/mig-venv/bin/activate
+(mig-venv) mig@macbook-pro %
+```
+And you're able to make sure your virtual environment is active using the `which` command:
+
+```bash
+(mig-venv) mig@macbook-pro % which python
+/Users/mig/.virtualenvs/mig-venv/bin/python
+```
+
+This means that our virtual environment is active.
+
+*IMPORTANT!!!* make sure that your virtual environment is active before you proceed
+
+* Now you're ready to install packages! Just enter the directory of the `SLU000 - Jupyter Notebook` using the `cd` command, and install the required packages that are enumerated in the `requirements.txt` file
+
+```bash
+cd ~/projects/ds-prep-course/"Week 0"/"SLU000 - Jupyter Notebook"
+pip install -r requirements.txt
 ```
 
 #### Working on the Learning Unit
@@ -242,13 +260,19 @@ unit structure.
 It will give you a handle on what to expect and what rules the instructors
 follow (and the effort they put) when creating a learning unit.
 
-So let's start the Jupyter Notebook app.
+So let's start the Jupyter Notebook app:
+* Activate your virtual environment
+* Enter the Learning unit directory
+* Run the jupyter notebook
 
-1. Activate the environment and run jupyter notebook
 ```bash
-source env/bin/activate
+source ~/.virtualenvs/mig-venv/bin/activate
+cd ~/projects/ds-prep-course/"Week 0"/"SLU000 - Jupyter Notebook"
 jupyter notebook
 ```
+
+1. Activate the environment and run jupyter notebook
+
 
 ##### The Exercise Notebook
 
@@ -259,11 +283,7 @@ So let's have a look at the sample Learning Unit.
 ![Open exercise notebook](assets/jupyter_exercise_notebook.png "Open exercise notebook")
 1. Follow the instructions provided in the notebook
 
-Besides the exercises and the cells for you to write solutions you will see
-other cells with a series of `assert` statements.
-This is how we (and you) will determine if a solution is correct.
-If all `assert` statements pass, meaning you dont get an `AssertionError` or
-any other kind of exception, the solution is correct.
+You'll see cells with the exercises and cells for you to write solutions.
 
 Once you've solved all of the notebook we recommend the following this simple 
 checklist to avoid unexpected surprises.
@@ -278,29 +298,34 @@ showing up.
 Now you have worked on the sample learning unit and you have some uncommitted 
 changes.
 It's time to commit the changes, which just means adding them to your 
-`ds-prep-worksapce` repository history, and pushing this history to your 
+`ds-prep-workspace` repository history, and pushing this history to your 
 remote on _GitHub_.
 
-1. Using the terminal commit and push the changes
+* Using the terminal commit and push the changes
 ```bash
 git add .
 git commit -m 'Testing the sample notebook'
 git push
 ```
 
+* Now type your git username, then press <kbd>enter</kbd>
+* Then type your git password , then press <kbd>enter</kbd>
+* You're all set!
+
 ## Learning Unit Workflow
 
 Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
-[batch3-students](https://github.com/LDSSA/batch3-students) 
+[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) 
 repository.
 
 The steps you followed during the initial setup are exactly what you are going
 to be doing for each new learning unit.
 Here's a quick recap:
 1. Once a new learning unit is available pull the changes from the 
-[batch3-students](https://github.com/LDSSA/batch3-students) repo.
-1. Copy the unit to your `batch3-workspace` repo
+[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) repo.
+1. Copy the unit to your `ds-prep-course` repo
+1. Install from requirements.txt
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
 1. Profit
@@ -331,7 +356,7 @@ material.
 We provide you with some different channels to ask for help.
 
 tl;dr:
-* ask for help in the appropriate slack channels (see bellow)
+* ask for help in the appropriate slack channels (see below)
 * don't be shy
 * provide context when asking for help
 * be respectful and be nice :) 
