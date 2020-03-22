@@ -324,19 +324,22 @@ git push
 Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-couse) 
-repository.
+repository.  
+The new Learning Unit is released every Monday, and its 
+solutions are then released the next Monday.
 
 The steps you followed during the initial setup are exactly what you are going
-to be doing for each new learning unit (1 per week).
+to be doing for each new Learning Unit.
 Here's a quick recap:
-1. Once a new learning unit is available at the beginning of each week, pull the changes from the 
+1. Once a new Learning Unit is available at the beginning of each week, pull the changes from the 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-couse) repo:
     * enter the `~/projects/ds-prep-course/` using the `cd` command, then use the `git pull` command:
     ```bash
     cd ~/projects/ds-prep-course/
     git pull
     ``` 
-1. Copy the learning unit to your `ds-prep-course` repo
+    * note that this will also pull the solutions for the Learning Unit of the precious week
+1. Copy the Learning Unit to your `ds-prep-course` repo
 1. Activate your virtual environment
 1. Install the python packages from requirements.txt
 1. Work
@@ -366,4 +369,4 @@ We understand it's not ideal and are working on improving this workflow.
 
 During the prep-course you will surely run into problems and have doubts about the
 material.
-Please refer to [this wiki page](TODO) on how to ask for help!
+Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science-Prep-Course#how-to-ask-for-help) on how to ask for help!
