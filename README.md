@@ -196,7 +196,7 @@ Windows Explorer should pop up now:
 
 <img src='assets/go_to_folder.png' alt='Sample learning unit' width="70%"/>
 
-then paste the path of your workspace `~/projects/ds-prep-workspace`, then click "Go".
+then paste the path the `ds-prep-course` repository `~/projects/ds-prep-course`, then click "Go".
 
 <img src='assets/finder_go.png' alt='Sample learning unit' width="90%"/>
 
