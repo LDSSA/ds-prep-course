@@ -1,21 +1,7 @@
-## How to install Jupyter Notebook in Ubuntu and Mac
+## Jupyter Notebook
 
-### Set up a virtual environment
-
-To create a virtual environment called `env` (you may use whatever name you like), use the command `python3 -m venv env`.
-
-To activate our virtual environment (in order to install and use the specific libraries we want for our current project - this tutorial) you should type the command below.
-Notice that once we do, on the leftmost side of the command line, the name of our virtual environment appears in parenthesis:  
-```console
-source env/bin/activate
-(env) 
-```
-
-### Install Jupyter Notebook
-
-Make sure your virtual environment is active, and then use pip to install Jupyter Notebook:
-```console
-(env) pip install notebook
-```
-
-You can then open Jupyter Notebook by using the command `jupyter notebook`. Navigate to the folder of SLU00 and you can click on the Learning and Exercise notebooks to open them.
+Jupyter Notebook is a web-based interactive computational environment for creating jupyter notebook documents. A jupyter notebook document integrates code and its output into a single document that can also have visualizations, narrative text, mathematical equations, and other rich media. This promotes iterative and rapid development, making notebooks an increasingly popular choice for data scientists. For this reason, we will use jupyter notebook not only in the python prep course but also in the data science academy.
+The purpose of this SLU is for you to become familiar with this tool.
+I will teach you the basics and some tips and tricks that I've used through the data science academy. 
+However, the biggest takeaway is this:
+Whenever you're using your mouse to work with Jupyter Notebook, try to find a shortcut instead! If you do this enough times, you'll be a Jupyter Notebook pro in no time! Goodluck!
