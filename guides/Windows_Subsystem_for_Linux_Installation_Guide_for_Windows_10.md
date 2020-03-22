@@ -69,6 +69,20 @@ This user account is for the normal non-admin user that you'll be logged-in as b
 
 When you open a new distro instance, you won't be prompted for your password, but **if you elevate a process using `sudo`, you will need to enter your password**, so make sure you choose a password you can easily remember!
 
+## Opening the WSL terminal
+
+After that, whenever you want to use WSL, just type "ubuntu" in your windows search bar 
+
+![start](assets/start.png)
+
+Open it:
+
+![start](assets/open_ubuntu.png)
+
+Then a terminal window will open that allows you to interact with Ubuntu.
+
+![Ubuntu unpacking in the Windows console](assets/orange_circle.png)
+
 ## Enable copy and paste keyboard shortcuts
 
 In the upper left corner of the WSL terminal, click the orange circle
@@ -107,15 +121,3 @@ The Windows Explorer should pop up:
 Keep in mind that you should manipulate files and create directories inside your `Ubuntu-18.04/home/<your name>` folder.
 
 ## You're all set!  
-
-Whenever you want to use WSL, just type "ubuntu" in your windows search bar 
-
-![start](assets/start.png)
-
-Open it:
-
-![start](assets/open_ubuntu.png)
-
-Then a terminal window will open that allows you to interact with Ubuntu.
-
-![Ubuntu unpacking in the Windows console](assets/orange_circle.png)

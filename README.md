@@ -133,7 +133,7 @@ cd ~/projects
 * You can now clone (retrieve from GitHub) your /ds-prep-workspace repository using the `git clone` command:
 
 ```bash
-git clone git@github.com:<username>/ds-prep-workspace.git
+git clone https://github.com/<username>/ds-prep-workspace.git
 ```
 
 * Now type your git username, then press <kbd>enter</kbd>
@@ -153,7 +153,7 @@ as the academy progresses.
 [ds-prep-course](https://github.com/LDSSA/ds-prep-couse)
 ```bash
 cd ~/projects
-git clone git@github.com:LDSSA/ds-prep-course.git
+git clone https://github.com/LDSSA/ds-prep-course.git
 ```
 
 #### Get the Week 0 Learning Unit
@@ -205,33 +205,40 @@ then paste the path to your workspace `~/projects/ds-prep-workspace`, then click
 
 #### Creating Python Virtual Environment and installing the necessary packages
 
+Bellow are the instructions that are enough to get the setup done and get you up and running :)  
+You can also follow [this guide](guides/How_to_set_up_python_virtual_environments.md) for a more in depth set of instructions that accomplish exactly the same thing.
+
+You should always be using a virtual environment to install python packages. We'll use _venv_ to set them up.  
+
+To install and update packages, we'll be using _pip_ is the reference Python package manager.   
+
 If you are using Ubuntu you will need to install a couple of packages first,
 this can be done in a terminal by running:
 ```bash
 sudo apt update && sudo apt upgrade && sudo apt install python3-pip python3-venv
 ```
 
-* Create a virtual environment with the name `mig-venv`
+* Create a virtual environment with the name `prep-venv`
 ```bash
-python3 -m venv ~/.virtualenvs/mig-venv
+python3 -m venv ~/.virtualenvs/prep-venv
 ```
 * Activate the environment 
 
 ```bash
-source ~/.virtualenvs/mig-venv/bin/activate
+source ~/.virtualenvs/prep-venv/bin/activate
 ```
 
 Note: after you activate your virtual environment you should see at the leftmost of your command line the name of your virtual environment surrounded by parenthesis, like this:
 
 ```bash
-mig@macbook-pro % source ~/.virtualenvs/mig-venv/bin/activate
-(mig-venv) mig@macbook-pro %
+mig@macbook-pro % source ~/.virtualenvs/prep-venv/bin/activate
+(prep-venv) mig@macbook-pro %
 ```
 And you're able to make sure your virtual environment is active using the `which` command:
 
 ```bash
-(mig-venv) mig@macbook-pro % which python
-/Users/mig/.virtualenvs/mig-venv/bin/python
+(prep-venv) mig@macbook-pro % which python
+/Users/mig/.virtualenvs/prep-venv/bin/python
 ```
 
 This means that our virtual environment is active.
@@ -266,7 +273,7 @@ So let's start the Jupyter Notebook app:
 * Run the jupyter notebook
 
 ```bash
-source ~/.virtualenvs/mig-venv/bin/activate
+source ~/.virtualenvs/prep-venv/bin/activate
 cd ~/projects/ds-prep-course/"Week 0"/"SLU000 - Jupyter Notebook"
 jupyter notebook
 ```
@@ -320,12 +327,18 @@ At this point they are available in the
 repository.
 
 The steps you followed during the initial setup are exactly what you are going
-to be doing for each new learning unit.
+to be doing for each new learning unit (1 per week).
 Here's a quick recap:
-1. Once a new learning unit is available pull the changes from the 
-[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) repo.
-1. Copy the unit to your `ds-prep-course` repo
-1. Install from requirements.txt
+1. Once a new learning unit is available at the beginning of each week, pull the changes from the 
+[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) repo:
+    * enter the `~/projects/ds-prep-course/` using the `cd` command, then use the `git pull` command:
+    ```bash
+    cd ~/projects/ds-prep-course/
+    git pull
+    ``` 
+1. Copy the learning unit to your `ds-prep-course` repo
+1. Activate your virtual environment
+1. Install the python packages from requirements.txt
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
 1. Profit
@@ -353,46 +366,4 @@ We understand it's not ideal and are working on improving this workflow.
 
 During the prep-course you will surely run into problems and have doubts about the
 material.
-We provide you with some different channels to ask for help.
-
-tl;dr:
-* ask for help in the appropriate slack channels (see below)
-* don't be shy
-* provide context when asking for help
-* be respectful and be nice :) 
-
-### Slack Usage
-
-#### The golden rule
-
-There is one slack rule to rule them all: **DON'T BE SHY! ASK QUESTIONS PUBLICLY**
-
-We know and totally understand that it can be intimidating to ask a question in front of a bunch of other people that you don't even know. We've all been there and can empathize. However, the rewards of overcoming this fear and asking a question in a slack channel that everyone can see are too great to ignore. The benefits, among others are:
-
-1. **You will get an answer faster.** If 50 people see your question, you will get an answer faster than if 1 person does.
-1. **You will get a better answer.** If 50 people see your question, you're likely get a better answer than if 1 person does.
-1. **You may make a friend.** It increases the chances of interacting with an interesting person that you may not have met otherwise. These types of peers can increase your chances of success immensely.
-
-#### The other golden rule
-
-Be respectful and be nice :) 
-
-#### Practicalities
-
-Here we will talk about each of the channels available in our slack channel and how they should be used. This is super important because it dictates how important information will be organized. While it may seem annoying at the moment to have to remember where to post a question, the future you will GREATLY appreciate it when you are looking for where that one clever answer to that one question is. Furthermore, you'll be very grateful not to have a question about a completely unrelated subject right next to your brilliant one. Trust us, the extra effort is worth it!
-
-There will be a channel meant for each week. There you'll find questions, answers and discussions meant for that week's topics.
-
-### How to ask for help
-
-Again, always ask in a slack channel and DO NOT DM an instructor! For your questions to be answered in the shortest possible time, provide us with enough context to be able to answer it. Among others, you can attach a screenshot or copy-paste formatted code together with your questions. If you, as a student, see a question that you know the answer to, do it! Answer it!
-
-### Other
-
-If your problem doesn't fit in any  of the previous categories head over to
-slack and ask.
-Someone will surely point you in the right direction.
-
-If you're looking for some specific part of our organization head over to the
-[Member Directory](https://github.com/LDSSA/wiki/wiki/Member-Directory)
-and search for the area of responsibility you're looking for.
+Please refer to [this wiki page](TODO) on how to ask for help!
