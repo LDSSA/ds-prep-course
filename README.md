@@ -64,7 +64,7 @@ If you are running an older version of Windows (such as Windows 8 or 7), follow 
 Some of the steps in the following sections will require _Homebrew_ for MacOS.
 Homebrew will make it easier to install software that we will use later on.  
 To open the terminal, choose one:
-* In Finder <img src='assets/finder.png' alt='Finder' width="5%" height="5%"/>, open the /Applications/Utilities folder, then double-click Terminal.
+* In Finder <img src='assets/finder.png' alt='Finder' width="4%" height="4%"/>, open the /Applications/Utilities folder, then double-click Terminal.
 * By pressing <kbd>cmd</kbd> + <kbd>space</kbd> then type `terminal` and press <kbd>enter</kbd>.
 
 The terminal should now be open:
@@ -192,14 +192,13 @@ Windows Explorer should pop up now:
 ![Sample learning unit](assets/week_0.png "Sample learning unit")
 
 * On Mac:
-    * In Finder <img src='assets/finder.png' alt='Finder' width="5%" height="5%"/>, open the "Go" menu, choose the option "Go to folder..."
+    * In Finder <img src='assets/finder.png' alt='Finder' width="4%" height="4%"/>, open the "Go" menu, choose the option "Go to folder..."
 
-![Sample learning unit](assets/go_to_folder.png "Sample learning unit")
+<img src='assets/go_to_folder.png' alt='Sample learning unit' width="70%"/>
 
 then paste the path to your workspace `~/projects/ds-prep-workspace`, then click "Go".
 
-![Sample learning unit](assets/finder_go.png "Sample learning unit")
-
+<img src='assets/finder_go.png' alt='Sample learning unit' width="90%"/>
 
 ### Running a Learning Unit
 
