@@ -208,7 +208,7 @@ You can also follow [this guide](guides/How_to_set_up_python_virtual_environment
 
 You should always be using a virtual environment to install python packages. We'll use _venv_ to set them up.  
 
-To install and update packages, we'll be using _pip_ is the reference Python package manager.   
+To install and update packages, we'll be using _pip_ which is the reference Python package manager.   
 
 If you are using Ubuntu you will need to install a couple of packages first,
 this can be done in a terminal by running:
@@ -302,7 +302,7 @@ So let's have a look at the sample Learning Unit.
 
 You'll see cells with the exercises and cells for you to write solutions.
 
-Once you've solved all of the notebook we recommend the following this simple 
+Once you've solved all of the notebook we recommend following this simple 
 checklist to avoid unexpected surprises.
 1. Save the notebook (again)
 1. Run "Restart & Run All"
