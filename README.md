@@ -298,6 +298,7 @@ checklist to avoid unexpected surprises.
 ![Restart & Run All](assets/jupyter_clear_and_run.png "Restart & Run All")
 1. At this point the notebook should have run without any error messages
 showing up.
+1. When you're done (after saving your work) you can go to the terminal and close it.
 
 #### Commit and Push
 
