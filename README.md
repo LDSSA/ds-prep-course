@@ -4,6 +4,7 @@ Welcome to Data Science Prep Course repository. Here is you'll find all informat
 workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
+    1. [Videos](#videos)
     1. [Windows Setup](#Windows-Setup)
     1. [Setup Git and GitHub](#setup-git-and-github)
     1. [Setup your Workspace Repository](#setup-your-workspace-repository)
@@ -29,6 +30,12 @@ Don't worry if you can't figure out what some the the commands you will
 use do. 
 Anything that is important will be explained in more detail during the course.
 
+### Videos
+
+You can find here some video guides that follow this setup:
+
+* [Setup guide for Mac](https://www.youtube.com/watch?v=qs0z4ibMFdU)
+* Setup guide for Windows (coming soon)
 
 ### Windows Setup
 
