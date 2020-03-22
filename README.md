@@ -5,16 +5,13 @@ workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
     1. [Windows Setup](#Windows-Setup)
-    1. [Setup _Git_/_GitHub_](#setup-_git__github_)
+    1. [Setup Git and GitHub](#setup-git-and-github)
     1. [Setup your Workspace Repository](#setup-your-workspace-repository)
     1. [Get the Learning Material](#get-the-learning-material)
     1. [Running a Learning Unit](#Running-a-Learning-Unit)
 1. [Learning Unit Workflow](#learning-unit-workflow)
 1. [Updates to Learning Units](#updates-to-learning-units)
 1. [Help](#help)
-    1. [Slack Usage](#slack-usage)
-    1. [How to Ask For Help](#How-to-Ask-For-Help)
-    1. [Other](#other)
 
 ## Initial Setup
 
@@ -79,7 +76,7 @@ Copy and paste the following line in the terminal:
 You may be offered to install the _Command Line Developers Tools_ confirm and
 once it's finished continue installing Homebrew by pressing <kbd>enter</kbd> again.
 
-### Setup _Git_/_GitHub_
+### Setup _Git_ and _GitHub_
 
 Git is a distributed version-control system for tracking changes in source 
 code.  
@@ -111,6 +108,8 @@ are working on.
 #### Creating the Workspace
 
 1. Log into _GitHub_
+1. In the upper-right corner of the page, there should be a `+` sign, click that, and then select `New repository`
+![Create Repository](assets/menu_create_repository.png "Create Repository")
 1. Create a new **private** _GitHub_ repository called *ds-prep-workspace*, see 
 [Creating a new repository](https://help.github.com/en/articles/creating-a-new-repository). 
 1. You need to explicitly select Private - This is your work and nobody else's. 
@@ -150,7 +149,7 @@ as the academy progresses.
 1. Open a Terminal (or use one you've already opened)
 1. Make sure you're in the right directory (use the `cd` command to enter the `~/projects`)
 1. Clone the students repository 
-[ds-prep-course](https://github.com/LDSSA/ds-prep-couse)
+[ds-prep-course](https://github.com/LDSSA/ds-prep-course)
 ```bash
 cd ~/projects
 git clone https://github.com/LDSSA/ds-prep-course.git
@@ -171,7 +170,7 @@ You can do that either using the command line, or the Operating System's Graphic
 
 ##### Using the command line
 
-If you have both the `ds-course-prep` and `ds-course-workspace` in a
+If you have both the `ds-prep-course` and `ds-prep-workspace` in a
 _projects_ directory you could do it using the command line like this:
 ```bash
 cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
@@ -180,7 +179,7 @@ cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
 ##### Using the Operating System's Graphical User Interface
 
 * On WSL with Ubuntu:
-    * first enter the `~/projects/ds-prep-course` directory using the `cd` command, then run `explorer.exe .` (don't forget to include the dot! the dot means "current directory") to open Windows explorer in the current directory:
+    * first enter the `~/projects/ds-prep-course` directory using the `cd` command, then run `explorer.exe .` **(don't forget to include the dot! the dot means "current directory")** to open Windows explorer in the current directory:
 
 ```bash
 cd ~/projects/ds-prep-course
@@ -215,6 +214,12 @@ If you are using Ubuntu you will need to install a couple of packages first,
 this can be done in a terminal by running:
 ```bash
 sudo apt update && sudo apt upgrade && sudo apt install python3-pip python3-venv
+```
+
+##### Start by installing ensuring pip, setuptools, and wheel are up to date:
+
+```bash
+python3 -m pip install --user --upgrade pip setuptools wheel
 ```
 
 * Create a virtual environment with the name `prep-venv`
@@ -278,9 +283,15 @@ jupyter notebook
 ```
 
 1. Activate the environment and run jupyter notebook
+1. When you run the `jupyter notebook` command, you should see something similar to this in your terminal:
+![Open exercise notebook](assets/jupyter_terminal.png "Open exercise notebook")
+1. and your browser should pop up with Jupyter open, however, if this does not happen, you can simply copy the link you see on your terminal (the one that contains `localhost`) and past it in your browser's address bar: 
 
+![Open exercise notebook](assets/jupyter_terminal_link.png "Open exercise notebook")
 
 ##### The Exercise Notebook
+
+Make sure you open and go through the Learning Notebook first.
 
 Every learning unit contains an exercise notebook with exercises you will
 work on.

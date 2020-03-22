@@ -15,7 +15,7 @@ _pip_ is the reference Python package manager. It’s used to install and update
 
 To install _pip_, type the following on your terminal:
 ```console
-mig@MacBook-Pro$ python3 -m pip install --user --upgrade pip
+mig@MacBook-Pro$ python3 -m pip install --user --upgrade pip setuptools wheel
 ```
 
 Afterwards, you should have the newest pip installed:
