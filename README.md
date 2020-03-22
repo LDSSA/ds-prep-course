@@ -320,6 +320,12 @@ It's time to commit the changes, which just means adding them to your
 `ds-prep-workspace` repository history, and pushing this history to your 
 remote on _GitHub_.
 
+* First you need to configure your email and username (replace "mig.dias.1212@gmail.com" with your email, and "buedaswag" with your username):
+```bash
+git config --global user.email "mig.dias.1212@gmail.com"
+git config --global user.username "buedaswag"
+```
+
 * Using the terminal first make sure you're in the right directory (using the `cd` command), then commit and push the changes
 ```bash
 cd ~/projects/ds-prep-workspace
@@ -336,7 +342,7 @@ git push
 
 Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
-[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) 
+[ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.  
 The new Learning Unit is released every Monday, and its 
 solutions are then released the next Monday.
@@ -345,7 +351,7 @@ The steps you followed during the initial setup are exactly what you are going
 to be doing for each new Learning Unit.
 Here's a quick recap:
 1. Once a new Learning Unit is available at the beginning of each week, pull the changes from the 
-[ds-prep-course](https://github.com/LDSSA/ds-prep-couse) repo:
+[ds-prep-course](https://github.com/LDSSA/ds-prep-course) repo:
     * enter the `~/projects/ds-prep-course/` using the `cd` command, then use the `git pull` command:
     ```bash
     cd ~/projects/ds-prep-course/
