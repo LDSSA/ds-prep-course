@@ -180,7 +180,7 @@ cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
 ##### Using the Operating System's Graphical User Interface
 
 * On WSL with Ubuntu:
-    * first enter the `~/projects/` directory using the `cd` command, then run `explorer.exe .` (don't forget to include the dot! the dot means "current directory") to open Windows explorer in the current directory:
+    * first enter the `~/projects/ds-prep-course` directory using the `cd` command, then run `explorer.exe .` (don't forget to include the dot! the dot means "current directory") to open Windows explorer in the current directory:
 
 ```bash
 cd ~/projects/ds-prep-course
@@ -196,7 +196,7 @@ Windows Explorer should pop up now:
 
 <img src='assets/go_to_folder.png' alt='Sample learning unit' width="70%"/>
 
-then paste the path to your workspace `~/projects/ds-prep-workspace`, then click "Go".
+then paste the path to your workspace `~/projects/ds-prep-course`, then click "Go".
 
 <img src='assets/finder_go.png' alt='Sample learning unit' width="90%"/>
 
@@ -247,7 +247,7 @@ This means that our virtual environment is active.
 * Now you're ready to install packages! Just enter the directory of the `SLU000 - Jupyter Notebook` using the `cd` command, and install the required packages that are enumerated in the `requirements.txt` file
 
 ```bash
-cd ~/projects/ds-prep-course/"Week 0"/"SLU000 - Jupyter Notebook"
+cd ~/projects/ds-prep-workspace/"Week 0"/"SLU000 - Jupyter Notebook"
 pip install -r requirements.txt
 ```
 
@@ -273,7 +273,7 @@ So let's start the Jupyter Notebook app:
 
 ```bash
 source ~/.virtualenvs/prep-venv/bin/activate
-cd ~/projects/ds-prep-course/"Week 0"/"SLU000 - Jupyter Notebook"
+cd ~/projects/ds-prep-workspace/"Week 0"/"SLU000 - Jupyter Notebook"
 jupyter notebook
 ```
 
@@ -307,8 +307,9 @@ It's time to commit the changes, which just means adding them to your
 `ds-prep-workspace` repository history, and pushing this history to your 
 remote on _GitHub_.
 
-* Using the terminal commit and push the changes
+* Using the terminal first make sure you're in the right directory (using the `cd` command), then commit and push the changes
 ```bash
+cd ~/projects/ds-prep-workspace
 git add .
 git commit -m 'Testing the sample notebook'
 git push
@@ -350,7 +351,7 @@ Here's a quick recap:
 As much as we try and have processes in place to prevent errors and bugs in 
 the learning units some make it through to you.
 If the problem is not in the exercise notebook you can just pull the new 
-version from the ds-prep-course repo and replace the file.
+version from the ds-prep-course repo and replace the file on your ds-prep-workspace.
 The problem is if the correction is in the exercise notebook, you can't just
 replace the file because your work is there and you'll lose it!
 
