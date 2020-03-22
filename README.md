@@ -289,6 +289,10 @@ jupyter notebook
 
 ![Open exercise notebook](assets/jupyter_terminal_link.png "Open exercise notebook")
 
+Note: If you see these scarry looking error messages, don't worry, you can just ignore them.
+
+![Open exercise notebook](assets/jupyter_error_red.png "Open exercise notebook")
+
 ##### The Exercise Notebook
 
 Make sure you open and go through the Learning Notebook first.
@@ -357,7 +361,7 @@ Here's a quick recap:
     cd ~/projects/ds-prep-course/
     git pull
     ``` 
-    * note that this will also pull the solutions for the Learning Unit of the precious week
+    * note that this will also pull the solutions for the Learning Unit of the previous week
 1. Copy the Learning Unit to your `ds-prep-course` repo
 1. Activate your virtual environment
 1. Install the python packages from requirements.txt
