@@ -217,10 +217,15 @@ You should always be using a virtual environment to install python packages. We'
 
 To install and update packages, we'll be using _pip_ which is the reference Python package manager.   
 
-If you are using Ubuntu you will need to install a couple of packages first,
+If you are using **Ubuntu** you will need to install a couple of packages first,
 this can be done in a terminal by running:
 ```bash
 sudo apt update && sudo apt upgrade && sudo apt install python3-pip python3-venv
+```
+
+If you are using **Mac OS** you will need to install python, this can be done in a terminal by running:
+```bash
+brew install python
 ```
 
 ##### Start by installing ensuring pip, setuptools, and wheel are up to date:
