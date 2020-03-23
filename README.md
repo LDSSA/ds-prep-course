@@ -335,6 +335,7 @@ remote on _GitHub_.
 ```bash
 git config --global user.email "mig.dias.1212@gmail.com"
 git config --global user.username "buedaswag"
+git config --global user.name "Bueda Swag"
 ```
 
 * Using the terminal first make sure you're in the right directory (using the `cd` command), then commit and push the changes
