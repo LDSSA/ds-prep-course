@@ -26,6 +26,7 @@ pandocfilters==1.4.2
 parso==0.6.2
 pexpect==4.8.0
 pickleshare==0.7.5
+pip==19.2.3
 prometheus-client==0.7.1
 prompt-toolkit==3.0.4
 ptyprocess==0.6.0
@@ -36,12 +37,14 @@ pyzmq==19.0.0
 qtconsole==4.7.1
 QtPy==1.9.0
 Send2Trash==1.5.0
+setuptools==41.2.0
 six==1.14.0
 terminado==0.8.3
 testpath==0.4.4
 tornado==6.0.4
 traitlets==4.3.3
-wcwidth==0.1.8
+wcwidth==0.1.9
 webencodings==0.5.1
+wheel==0.34.2
 widgetsnbextension==3.5.1
 zipp==3.1.0
