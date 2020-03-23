@@ -1,6 +1,6 @@
 # How to set up python virtual environments
 
-## Initial Setup for Ubuntu: _pip_ and _ven_
+## Initial Setup for Ubuntu: _pip_ and _venv_
 
 If you have a Mac, you don't need to do this part.
 ```console
@@ -37,7 +37,7 @@ To create a virtual environment called `prep-venv` (you may use whatever name yo
 mig@MacBook-Pro$ python3 -m venv ~/.virtualenvs/prep-venv
 ```
 
-We will now activate our virtual environment (in order to install and use the specific libraries we want for the prep course) by typing the command bellow.
+We will now activate our virtual environment (in order to install and use the specific libraries we want for the prep course) by typing the command below.
 Notice that once we do, on the leftmost side of the command line, the name of our virtual environment appears in parenthesis.  
 ```console
 mig@MacBook-Pro$ source ~/.virtualenvs/prep-venv/bin/activate
@@ -55,7 +55,7 @@ source ~/.virtualenvs/prep-venv/bin/activate/prep-venv/bin/python
 
 Noticed that because we used the default python3 to create our virtual environment, when we have the virtual environment active, we can refer to python3 as just python, and to pip3 as just pip.
 
-We can also deactivate our virtual environment (note that deactivating a virtual environment **does not** remove it) by typing the command bellow.  
+We can also deactivate our virtual environment (note that deactivating a virtual environment **does not** remove it) by typing the command below.  
 By doing this, we stop working in our isolated Python environment.
 Notice that once we do, on the leftmost side of the command line, the name of our virtual environment disappears:
 ```console
