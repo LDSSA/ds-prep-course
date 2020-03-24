@@ -53,7 +53,14 @@ mig@MacBook-Pro$ source ~/.virtualenvs/prep-venv/bin/activate
 source ~/.virtualenvs/prep-venv/bin/activate/prep-venv/bin/python
 ```
 
+The first thing we will do at this point is upgrade our virtual environment's version of pip:
+```bash
+pip install -U pip
+```
+
 Notice that because we used the default python3 to create our virtual environment, when we have the virtual environment active, we can refer to python3 as just python, and to pip3 as just pip.
+
+
 
 We can also deactivate our virtual environment (note that deactivating a virtual environment **does not** remove it) by typing the command below.  
 By doing this, we stop working in our isolated Python environment.
