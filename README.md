@@ -110,7 +110,7 @@ instructions.
 ### Setup your Workspace Repository
 
 The workspace directory/repository is where you will place everything you
-are working on.
+are working on, where you will make changes to files, write code, etc.
 
 #### Creating the Workspace
 
@@ -151,7 +151,7 @@ git clone https://github.com/<username>/ds-prep-workspace.git
 You will be cloning the [ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.
 All of the learning material you need will be made available on this repo
-as the academy progresses.
+as the academy progresses.  
 
 1. Open a Terminal (or use one you've already opened)
 1. Make sure you're in the right directory (use the `cd` command to enter the `~/projects`)
@@ -290,7 +290,8 @@ follow (and the effort they put) when creating a learning unit.
 
 So let's start the Jupyter Notebook app:
 * Activate your virtual environment
-* Enter the Learning unit directory
+* Enter the Learning unit directory in your workspace directory (`ds-prep-workspace`). 
+    * Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files on your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository!
 * Run the jupyter notebook
 
 ```bash
@@ -334,6 +335,8 @@ showing up.
 <img src='assets/terminal_notebook.png' alt='Sample learning unit' width="70%"/>
 
 #### Commit and Push
+
+* Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files in your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository! So before you do this step, make sure that the files you made changes to are the ones in your `ds-prep-workspace` folder.
 
 Now you have worked on the sample learning unit and you have some uncommitted 
 changes.
@@ -380,7 +383,7 @@ Here's a quick recap:
     git pull
     ``` 
     * note that this will also pull the solutions for the Learning Unit of the previous week
-1. Copy the Learning Unit to your `ds-prep-course` repo
+1. Copy the Learning Unit to your `ds-prep-workspace` repo ()
 1. Activate your virtual environment
 1. Install the python packages from requirements.txt
 1. Work
