@@ -238,7 +238,7 @@ python3 -m pip install --user --upgrade pip setuptools wheel
 ```bash
 python3 -m venv ~/.virtualenvs/prep-venv
 ```
-* Activate the environment 
+* Activate the environment
 
 ```bash
 source ~/.virtualenvs/prep-venv/bin/activate
@@ -255,6 +255,11 @@ And you're able to make sure your virtual environment is active using the `which
 ```bash
 (prep-venv) mig@macbook-pro % which python
 /Users/mig/.virtualenvs/prep-venv/bin/python
+```
+
+Please don't forget to update pip.
+```bash
+pip install -U pip
 ```
 
 This means that our virtual environment is active.
