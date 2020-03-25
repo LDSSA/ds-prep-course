@@ -34,8 +34,11 @@ Anything that is important will be explained in more detail during the course.
 
 You can find here some video guides that follow this setup:
 
+* [Setup guide for Windows - Part 1](https://www.youtube.com/watch?v=fWi3bYoHW18)
+* [Setup guide for Windows - Part 2](https://www.youtube.com/watch?v=bnJOQHh9pJ4)
 * [Setup guide for Mac](https://www.youtube.com/watch?v=qs0z4ibMFdU)
-* Setup guide for Windows (coming soon)
+* [Updates to Learning Units guide for Windows 10](https://www.youtube.com/watch?v=Q2Cezm6ufrE)
+* [Updates to Learning Units guide for Mac](https://www.youtube.com/watch?v=-fzIDfNBZ0I)
 
 ### Windows Setup
 
@@ -137,6 +140,8 @@ cd ~/projects
 ```
 
 * You can now clone (retrieve from GitHub) your /ds-prep-workspace repository using the `git clone` command:
+    * Note: in the link bellow, be sure to replace `<username>` with your github username. For me, because my github username is `buedaswag`, the link would be:
+    `git clone https://github.com/buedaswag/ds-prep-workspace.git`
 
 ```bash
 git clone https://github.com/<username>/ds-prep-workspace.git
@@ -365,12 +370,14 @@ git push
 
 ## Learning Unit Workflow
 
+You will need to follow this workflow every week starting from week 1 (if you completed the [Initial Setup](#initial-setup), which corresponds to week 0, you dont need to do the Learning Unit Workflow, but do read on!).  
+
 Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.  
 The new Learning Unit is released every Monday, and its 
-solutions are then released the next Monday.
+solutions are then released the next Monday.  
 
 The steps you followed during the initial setup are exactly what you are going
 to be doing for each new Learning Unit.
@@ -383,7 +390,15 @@ Here's a quick recap:
     git pull
     ``` 
     * note that this will also pull the solutions for the Learning Unit of the previous week
-1. Copy the Learning Unit to your `ds-prep-workspace` repo ()
+1. Copy the Learning Unit to your `ds-prep-workspace` repo
+    * To do that you can use the `cp` command:
+    ```bash
+    cp -r ~/projects/ds-prep-course/"Week <week number>" ds-prep-workspace
+    ``` 
+    and you would replace the `<week number>` with the week number, such that in week 0, for example, the command would be:
+    ```bash
+    cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
+    ``` 
 1. Activate your virtual environment
 1. Install the python packages from requirements.txt
 1. Work
