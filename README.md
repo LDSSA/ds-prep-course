@@ -436,6 +436,12 @@ Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science
 
 ### Troubleshooting
 
+#### When I open Windows Explorer through Ubuntu, it goes to a different folder than in the guide
+
+* Please make sure:
+    * you are running the command `explorer.exe .` including the dot at the end.
+    * you are running Windows 10 version `1909` or newer.
+
 #### Ubuntu on Windows 10 high CPU usage, crashes
 
 * First please make sure you are running Windows 10 version `1909` or newer.
