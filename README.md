@@ -13,6 +13,8 @@ workflow you'll use during the Prep Course.
 1. [Learning Unit Workflow](#learning-unit-workflow)
 1. [Updates to Learning Units](#updates-to-learning-units)
 1. [Help](#help)
+    1. [Troubleshooting](#Troubleshooting)
+1. [Tips and Tricks](#Tips-and-Tricks)
 
 ## Initial Setup
 
@@ -140,8 +142,8 @@ cd ~/projects
 ```
 
 * You can now clone (retrieve from GitHub) your /ds-prep-workspace repository using the `git clone` command:
-    * Note: in the link bellow, be sure to replace `<username>` with your github username. For me, because my github username is `buedaswag`, the link would be:
-    `git clone https://github.com/buedaswag/ds-prep-workspace.git`
+    >Note: in the link used in the command bellow, be sure to replace `<username>` with your github username. For me, because my github username is `buedaswag`, the link would be:
+`https://github.com/buedaswag/ds-prep-workspace.git`
 
 ```bash
 git clone https://github.com/<username>/ds-prep-workspace.git
@@ -249,7 +251,7 @@ python3 -m venv ~/.virtualenvs/prep-venv
 source ~/.virtualenvs/prep-venv/bin/activate
 ```
 
-Note: after you activate your virtual environment you should see at the leftmost of your command line the name of your virtual environment surrounded by parenthesis, like this:
+>Note: after you activate your virtual environment you should see at the leftmost of your command line the name of your virtual environment surrounded by parenthesis, like this:
 
 ```bash
 mig@macbook-pro % source ~/.virtualenvs/prep-venv/bin/activate
@@ -296,8 +298,10 @@ follow (and the effort they put) when creating a learning unit.
 So let's start the Jupyter Notebook app:
 * Activate your virtual environment
 * Enter the Learning unit directory in your workspace directory (`ds-prep-workspace`). 
-    * Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files on your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository!
+    >Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files on your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository!
 * Run the jupyter notebook
+    >**Windows 10 note:** if you are running **Windows 10**, the command to run the jupyter notebook is: `jupyter notebook --NotebookApp.use_redirect_file=False`
+
 
 ```bash
 source ~/.virtualenvs/prep-venv/bin/activate
@@ -312,7 +316,7 @@ jupyter notebook
 
 ![Open exercise notebook](assets/jupyter_terminal_link.png "Open exercise notebook")
 
-Note: If you see these scarry looking error messages, don't worry, you can just ignore them.
+>Note: If you see these scarry looking error messages, don't worry, you can just ignore them.
 
 ![Open exercise notebook](assets/jupyter_error_red.png "Open exercise notebook")
 
@@ -341,7 +345,7 @@ showing up.
 
 #### Commit and Push
 
-* Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files in your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository! So before you do this step, make sure that the files you made changes to are the ones in your `ds-prep-workspace` folder.
+>Note: It is **VERY IMPORTANT** that you **ALWAYS** work on the files in your `ds-prep-workspace` repository, and **NEVER** work on files that are in your `ds-prep-course` repository! So before you do this step, make sure that the files you made changes to are the ones in your `ds-prep-workspace` folder.
 
 Now you have worked on the sample learning unit and you have some uncommitted 
 changes.
@@ -389,7 +393,7 @@ Here's a quick recap:
     cd ~/projects/ds-prep-course/
     git pull
     ``` 
-    * note that this will also pull the solutions for the Learning Unit of the previous week
+    >note that this will also pull the solutions for the Learning Unit of the previous week
 1. Copy the Learning Unit to your `ds-prep-workspace` repo
     * To do that you can use the `cp` command:
     ```bash
@@ -429,3 +433,11 @@ We understand it's not ideal and are working on improving this workflow.
 During the prep-course you will surely run into problems and have doubts about the
 material.
 Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science-Prep-Course#how-to-ask-for-help) on how to ask for help!
+
+### Troubleshooting
+
+Coming soon.
+
+## Tips and Tricks
+
+Coming soon.

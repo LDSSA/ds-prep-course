@@ -1,8 +1,8 @@
-# **Windows** Subsystem for Linux Installation Guide for **Windows** 10
+# Windows Subsystem for Linux Installation Guide for Windows 10
 
-## Make sure that **Windows** is up to date
+## Make sure that Windows is up to date
 
-1. Type "update" in your **windows** search bar 
+1. Type "update" in your Windows search bar 
 
 ![start](assets/start.png)
 
@@ -10,17 +10,17 @@ then click "Check for Updates"
 
 ![start](assets/open_update.png)
 
-then download and install any updates that appear on the **Windows** Update menu (shown bellow)
+then download and install any updates that appear on the Windows Update menu (shown bellow)
 
 ![start](assets/windows_update.png)
 
-if in the process of installing updates your computer restarts, make sure your go back to the **Windows** Update menu and check that your computer is up to date. Then you may proceed with the guide.
+After you're done installing those updates, please [check which version of Windows 10 you are running](https://support.microsoft.com/en-us/help/13443/windows-which-version-am-i-running), and if your version number is smaller that `1909`, then please keep coming back to Windows Update and installing updates untill you have at least version `1909`. Then you may proceed with the guide.
 
-## Install the **Windows** Subsystem for Linux
+## Install the Windows Subsystem for Linux
 
-Before installing any Linux distros for WSL, you must ensure that the "**Windows** Subsystem for Linux" optional feature is enabled:
+Before installing any Linux distros for WSL, you must ensure that the "Windows Subsystem for Linux" optional feature is enabled:
 
-1. Open PowerShell as Administrator by typing "PowerShell" in your **windows** search bar 
+1. Open PowerShell as Administrator by typing "PowerShell" in your Windows search bar 
 
 ![start](assets/start.png)
 
@@ -47,7 +47,7 @@ and run it by pressing <kbd>enter</kbd>:
 
 
 ## Launch a distro
-To complete the initialization of your newly installed distro, launch a new instance. You can do this by typing "ubuntu" in your **windows** search bar 
+To complete the initialization of your newly installed distro, launch a new instance. You can do this by typing "ubuntu" in your Windows search bar 
 
 ![start](assets/start.png)
 
@@ -61,17 +61,17 @@ The first time a newly installed distro runs, a Console window will open, and yo
 
 Once installation is complete, you will be prompted to create a new user account (and its password). 
 
-![Ubuntu unpacking in the **Windows** console](assets/UbuntuInstall.png)
+![Ubuntu unpacking in the Windows console](assets/UbuntuInstall.png)
 
 This user account is for the normal non-admin user that you'll be logged-in as by default when launching a distro.
 
-> You can choose any username and password you wish - they have no bearing on your **Windows** username. 
+> You can choose any username and password you wish - they have no bearing on your Windows username. 
 
 When you open a new distro instance, you won't be prompted for your password, but **if you elevate a process using `sudo`, you will need to enter your password**, so make sure you choose a password you can easily remember!
 
 ## Opening the WSL terminal
 
-After that, whenever you want to use WSL, just type "ubuntu" in your **windows** search bar 
+After that, whenever you want to use WSL, just type "ubuntu" in your Windows search bar 
 
 ![start](assets/start.png)
 
@@ -81,21 +81,21 @@ Open it:
 
 Then a terminal window will open that allows you to interact with Ubuntu.
 
-![Ubuntu unpacking in the **Windows** console](assets/orange_circle.png)
+![Ubuntu unpacking in the Windows console](assets/orange_circle.png)
 
 ## Enable copy and paste keyboard shortcuts
 
 In the upper left corner of the WSL terminal, click the orange circle
 
-![Ubuntu unpacking in the **Windows** console](assets/orange_circle.png)
+![Ubuntu unpacking in the Windows console](assets/orange_circle.png)
 
 then click "Properties"
 
-![Ubuntu unpacking in the **Windows** console](assets/orange_circle_properties.png)
+![Ubuntu unpacking in the Windows console](assets/orange_circle_properties.png)
 
 Then under the "Options" tab, in the Edit Options section, make sure that "Use Ctrl+Shift+C/V as Copy/Paste" in enabled, then click "OK"
 
-![Ubuntu unpacking in the **Windows** console](assets/copy_paste_properties.png)
+![Ubuntu unpacking in the Windows console](assets/copy_paste_properties.png)
 
 ## Update & upgrade your distro's packages
 
@@ -105,16 +105,16 @@ Most distros ship with an empty/minimal package catalog. We strongly recommend r
 sudo apt update && sudo apt upgrade
 ```
 
-> **Windows** does not automatically update or upgrade your Linux distro(s): This is a task that the Linux users prefer to control themselves.
+> Windows does not automatically update or upgrade your Linux distro(s): This is a task that the Linux users prefer to control themselves.
 
-## How to open **Windows** File Explorer to manipulate files inside WSL
+## How to open Windows File Explorer to manipulate files inside WSL
 
-If you’d like to use **Windows** File Explorer to manipulate the files in WSL, just type this in the WSL terminal **(don't forget to include the dot! the dot means "current directory")**:
+If you’d like to use Windows File Explorer to manipulate the files in WSL, just type this in the WSL terminal **(don't forget to include the dot! the dot means "current directory")**:
 
 ```console
 mig@DESKTOP-GKLQ11P:~$ explorer.exe .
 ```
-The **Windows** Explorer should pop up:
+The Windows Explorer should pop up:
 
 ![start](assets/windows_explorer.png)
 
