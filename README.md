@@ -436,7 +436,12 @@ Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science
 
 ### Troubleshooting
 
-Coming soon.
+#### Ubuntu on Windows 10 high CPU usage, crashes
+
+* First please make sure you are running Windows 10 version `1909` or newer.
+* Then, try following [these steps](https://teckangaroo.com/enable-windows-10-virtual-machine-platform/)
+
+If the above steps didn't solve the problem for you, please contact us on Slack or if you are not on slack, [open an issue](https://guides.github.com/features/issues/)
 
 ## Tips and Tricks
 
