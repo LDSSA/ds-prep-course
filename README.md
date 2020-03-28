@@ -1,6 +1,6 @@
 # Data Science Prep Course Repository
 
-Welcome to Data Science Prep Course repository. Here is you'll find all information needed to setup your environment and the
+Welcome to Data Science Prep Course repository. Here is where you'll find all information needed to setup your environment and the
 workflow you'll use during the Prep Course.
 
 1. [Initial Setup](#initial-setup)
