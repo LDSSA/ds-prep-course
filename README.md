@@ -22,13 +22,13 @@ workflow you'll use during the Prep Course.
 Before the prep-course you will have to complete these instructions, this is 
 essential.
 
-Once you complete the setup mark yourself as such on [this spreadsheet](https://docs.google.com/spreadsheets/d/1NDddtliEi8RdGmEogCz2Lz-Yyq3IM6wjYDY1IuR18GI/edit?usp=sharing).
-Make sure that you complete the setup by the 30th of March, as the course will begin on that day. If you are struggling to install any of the software to be mentioned below, tell us ASAP! The course by itself will be very intensive, so we do not want you to waste time on the setting up part after the 30th of March!! 
+Once you complete the setup mark yourself as completed (Yes) on [this spreadsheet](https://docs.google.com/spreadsheets/d/1NDddtliEi8RdGmEogCz2Lz-Yyq3IM6wjYDY1IuR18GI/edit?usp=sharing).
+Make sure that you complete the setup by the 30th of March, as the course will begin on that day. If you are struggling to install any of the software mentioned below, tell us ASAP! The course by itself will be very intensive, so we do not want you to waste time setting up after the 30th of March!! 
 
 By completing this you will setup and learn about all the tools you'll be
 using during the academy. We will also be able to identify any problems in time to figure out a solution.
 
-Don't worry if you can't figure out what some the the commands you will
+Don't worry if you can't figure out what some of the the commands you will
 use do. 
 Anything that is important will be explained in more detail during the course.
 
@@ -52,9 +52,9 @@ If you are using windows 10 we suggest using WSL (see below), if you are using a
 
 ##### Why do I need to install either WSL or VMware?
 
-Because of the differences in command line syntax between Windows vs Mac OS/Linux, it would be a great challenge for us to support and provide instructions for both Operating Systems. For this reason, we’d ask you to install Windows Subsystem for Linux, or VMware, which would enable you to run Linux command lines inside Windows. Keep in mind that these are simply extensions to your Windows operating system, hence, installing this software will not do any changes on your laptop. It is also quick to do so.
+Because of the differences in command line syntax between Windows vs Mac OS/Linux, it would be a great challenge for us to support and provide instructions for both Operating Systems. So, we’d ask you to install Windows Subsystem for Linux, or VMware, which would enable you to run Linux command lines inside Windows. Keep in mind that these are simply extensions to your Windows operating system, hence, installing this software will not do any changes to your laptop. It is also quick and easy to do so.
  
-If due to some reasons, you cannot install WSL or VMware (e.g. you do not have the admin rights for your computer), you can still join the Prep Course and follow the Learning materials. However, all of our setup instructions and learning materials are created for Mac OS/Linux, and unfortunately we will not be able to provide support on how to do it on Windows.
+If you cannot install WSL or VMware, for whatever reason (e.g. you don't hav admin rights on your computer), you can still join the Prep Course and follow the Learning materials. However, all of our setup instructions and learning materials are created for Mac OS/Linux, and unfortunately we will not be able to provide support on how to do it on Windows.
 If you have some doubts/worries, feel free to reach out to us.
 
 #### Windows 10 Setup
@@ -63,7 +63,7 @@ Follow [this guide](guides/Windows_Subsystem_for_Linux_Installation_Guide_for_Wi
 
 #### Older Windows Setup 
 
-If you are running an older version of Windows (such as Windows 8 or 7), follow the guide below on running Ubuntu with Windows using VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided below (not the links provided in the tutorial).
+If you are running an older version of Windows (such as Windows 8 or 7), follow the guide below about running Ubuntu with Windows using VMware Player. You'll be required to download VMware and Ubuntu 18, for that please use the links provided below (not the links provided in the tutorial).
 * [VMware download link](https://www.vmware.com/go/getplayer-win)
 * [Ubuntu download link](https://ubuntu.com/download/desktop/thank-you?version=18.04.4&architecture=amd64)
 * Follow this guide: [How To Run Ubuntu in Windows 7 with VMware Player](https://www.howtogeek.com/howto/11287/how-to-run-ubuntu-in-windows-7-with-vmware-player/)
@@ -71,7 +71,7 @@ If you are running an older version of Windows (such as Windows 8 or 7), follow 
 ### MacOS Setup
 
 Some of the steps in the following sections will require _Homebrew_ for MacOS.
-Homebrew will make it easier to install software that we will use later on.  
+Homebrew will make it easier to install software that we'll use later on.  
 To open the terminal, choose one:
 * In Finder <img src='assets/finder.png' alt='Finder' width="4%" height="4%"/>, open the /Applications/Utilities folder, then double-click Terminal.
 * By pressing <kbd>cmd</kbd> + <kbd>space</kbd> then type `terminal` and press <kbd>enter</kbd>.
@@ -85,14 +85,14 @@ Copy and paste the following line in the terminal:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
-You may be offered to install the _Command Line Developers Tools_ confirm and
-once it's finished continue installing Homebrew by pressing <kbd>enter</kbd> again.
+You may be prompted to install the _Command Line Developers Tools_ confirm and
+once it finishes, continue installing Homebrew by pressing <kbd>enter</kbd> again.
 
 ### Setup _Git_ and _GitHub_
 
 Git is a distributed version-control system for tracking changes in source 
 code.  
-A repository is where code lives, and the code from the prep course will live in the [ds-prep-course](https://github.com/LDSSA/ds-prep-course) repository, and the learning materials and exercises will be released (made available) in that repository.
+A repository is where code lives, and the code from the prep course will live in [ds-prep-course](https://github.com/LDSSA/ds-prep-course) repository, and the learning materials and exercises will be released (made available) in that repository.
 
 #### Install Git
 
@@ -120,11 +120,11 @@ are working on, where you will make changes to files, write code, etc.
 #### Creating the Workspace
 
 1. Log into _GitHub_
-1. In the upper-right corner of the page, there should be a `+` sign, click that, and then select `New repository`
+1. In the upper-right corner of the page, there should be a signin button, and then select `New repository`
 ![Create Repository](assets/menu_create_repository.png "Create Repository")
 1. Create a new **private** _GitHub_ repository called *ds-prep-workspace*, see 
 [Creating a new repository](https://help.github.com/en/articles/creating-a-new-repository). 
-1. You need to explicitly select Private - This is your work and nobody else's. 
+1. You need to explicitly select Private - This is your private work environment. 
 1. Initialize with a README. 
 1. Add a Python `.gitignore`.
 
@@ -142,7 +142,7 @@ cd ~/projects
 ```
 
 * You can now clone (retrieve from GitHub) your /ds-prep-workspace repository using the `git clone` command:
-    >Note: in the link used in the command bellow, be sure to replace `<username>` with your github username. For me, because my github username is `buedaswag`, the link would be:
+    >Note: in the link used in the command bellow, be sure to replace `<username>` with your github username. (ie: my github username is `buedaswag`, so the link would be):
 `https://github.com/buedaswag/ds-prep-workspace.git`
 
 ```bash
