@@ -411,7 +411,7 @@ Here's a quick recap:
     ```bash
     pip install -r ~/projects/ds-prep-workspace/"Week <week number>"/"<SLU name>"/requirements.txt
     ```
-    and you would replace <week number> and <SLU name>, such that in Week 0 and SLU000 - Jupyter Notebook, for example, the command would be:
+    and you would replace `<week number>` and `<SLU name>`, such that in Week 0 and SLU000 - Jupyter Notebook, for example, the command would be:
     ```bash
     pip install -r ~/projects/ds-prep-workspace/"Week 0"/"SLU000 - Jupyter Notebook"/requirements.txt
     ```
@@ -424,7 +424,8 @@ Here's a quick recap:
     jupyter notebook
     ```
 1. Work
-1. Once all tests pass or once you're happy, commit the changes and push
+1. Once all tests pass or once you're happy, save your work, close the browser tab with the Jupyter Notebook, close the terminal and open a new terminal
+1. Then commit the changes and push
     ```bash
     cd ~/projects/ds-prep-workspace
     git add .
