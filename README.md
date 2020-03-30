@@ -380,7 +380,7 @@ Learning units will be announced in the academy's _#annoucements_ channel.
 At this point they are available in the 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.  
-The new Learning Unit is released every Monday, and its 
+A new Learning Unit is released every Monday, and its 
 solutions are then released the next Monday.  
 
 The steps you followed during the initial setup are exactly what you are going
@@ -397,17 +397,36 @@ Here's a quick recap:
 1. Copy the Learning Unit to your `ds-prep-workspace` repo
     * To do that you can use the `cp` command:
     ```bash
-    cp -r ~/projects/ds-prep-course/"Week <week number>" ds-prep-workspace
+    cp -r ~/projects/ds-prep-course/"Week <week number>" ~/projects/ds-prep-workspace
     ``` 
     and you would replace the `<week number>` with the week number, such that in week 0, for example, the command would be:
     ```bash
-    cp -r ~/projects/ds-prep-course/"Week 0" ds-prep-workspace
+    cp -r ~/projects/ds-prep-course/"Week 0" ~/projects/ds-prep-workspace
     ``` 
+1. Change to the `ds-prep-workspace` dir
+```bash
+cd ~/projects/ds-prep-workspace
+```
 1. Activate your virtual environment
+```bash
+source ~/.virtualenvs/prep-venv/bin/activate
+```
 1. Install the python packages from requirements.txt
+```bash
+pip install -r requirements.txt
+```
 1. Open Jupyter Notebook
+```bash
+jupyter notebook
+```
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
+```bash
+cd ~/projects/ds-prep-workspace
+git add .
+git commit -m "Work o week 0 exercises"
+git push
+```
 1. Profit
 
 ## Updates to Learning Units
