@@ -405,6 +405,7 @@ Here's a quick recap:
     ``` 
 1. Activate your virtual environment
 1. Install the python packages from requirements.txt
+1. Open Jupyter Notebook
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
 1. Profit
