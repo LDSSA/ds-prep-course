@@ -403,30 +403,34 @@ Here's a quick recap:
     ```bash
     cp -r ~/projects/ds-prep-course/"Week 0" ~/projects/ds-prep-workspace
     ``` 
-1. Change to the `ds-prep-workspace` dir
-```bash
-cd ~/projects/ds-prep-workspace
-```
 1. Activate your virtual environment
-```bash
-source ~/.virtualenvs/prep-venv/bin/activate
-```
-1. Install the python packages from requirements.txt
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    source ~/.virtualenvs/prep-venv/bin/activate
+    ```
+1. Install the python packages from requirements.txt for the specific SLU (you must do this for each SLU, and there are multiple SLU's in a Week)
+    ```bash
+    pip install -r ~/projects/ds-prep-workspace/"Week <week number>"/"<SLU name>"/requirements.txt
+    ```
+    and you would replace <week number> and <SLU name>, such that in Week 0 and SLU000 - Jupyter Notebook, for example, the command would be:
+    ```bash
+    pip install -r ~/projects/ds-prep-workspace/"Week 0"/"SLU000 - Jupyter Notebook"/requirements.txt
+    ```
+1. Change to the `ds-prep-workspace` dir
+    ```bash
+    cd ~/projects/ds-prep-workspace
+    ```
 1. Open Jupyter Notebook
-```bash
-jupyter notebook
-```
+    ```bash
+    jupyter notebook
+    ```
 1. Work
 1. Once all tests pass or once you're happy, commit the changes and push
-```bash
-cd ~/projects/ds-prep-workspace
-git add .
-git commit -m "Work o week 0 exercises"
-git push
-```
+    ```bash
+    cd ~/projects/ds-prep-workspace
+    git add .
+    git commit -m "Work on week <week number> exercises"
+    git push
+    ```
 1. Profit
 
 ## Updates to Learning Units
