@@ -374,9 +374,9 @@ git push
 
 ## Learning Unit Workflow
 
-You will need to follow this workflow every week starting from week 1 (if you completed the [Initial Setup](#initial-setup), which corresponds to week 0, you dont need to do the Learning Unit Workflow, but do read on!).  
+You will need to follow this workflow every week starting from week 1.  
 
-Learning units will be announced in the academy's _#annoucements_ channel.
+Learning units will be announced in the academy's _#announcements_ channel.
 At this point they are available in the 
 [ds-prep-course](https://github.com/LDSSA/ds-prep-course) 
 repository.  
