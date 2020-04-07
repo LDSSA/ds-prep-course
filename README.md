@@ -463,8 +463,8 @@ Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science
 
 1. [When I open Windows Explorer through Ubuntu, it goes to a different folder than in the guide](#When-I-open-Windows-Explorer-through-Ubuntu,-it-goes-to-a-different-folder-than-in-the-guide)
 1. [Tips and Tricks](#Tips-and-Tricks)
-1. [When I pull from the `ds prep course` repository, I get the error](#When-I-pull-from-the-ds-prep-course-repository,-I-get-the-error)
-1. [When I try to open `jupyter notebook`, I get the error](#When-I-try-to-open-jupyter-notebook,-I-get-the-error)
+1. [When I pull from the `ds prep course` repository, I get an error](#When-I-pull-from-the-ds-prep-course-repository,-I-get-the-error)
+1. [When I try to open `jupyter notebook`, I get an error](#When-I-try-to-open-jupyter-notebook,-I-get-the-error)
 1. [When I use the `cp` command the `>` sign appears and the command does not execute](#When-I-use-the-`cp`-command-the->-sign-appears-and-the-command-does-not-execute)
 
 #### When I open Windows Explorer through Ubuntu, it goes to a different folder than in the guide
