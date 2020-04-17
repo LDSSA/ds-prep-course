@@ -141,7 +141,10 @@ def exercise_2_grading(calculate_price_of_all_fruits):
     source = inspect.getsource(calculate_price_of_all_fruits)
     assert "return" in source, 'Did you forget to return?'
     assert ".calculate_price()" in source, 'We want you to use the .calculate_price method'
-    assert "28" not in source, 'No numbers in the function please'
+    assert "28" not in source, 'No answers in the function please'
+
+    assert calculate_price_of_all_fruits(
+        [apples, bananas]), 'Tried running, but got nothing back. Are you returning anything?'
 
     error = "The total price seems wrong, maybe test it with some fruits from exercise 1?"
     assert calculate_price_of_all_fruits([apples, bananas, oranges]) == 28, error
@@ -181,8 +184,9 @@ def exercise_4_grading(Student, maria, minh, sam):
     assert 'self.average_grade=' in source, 'What about the average grade?'
 
     # did they create the right students?
-    assert maria.name == 'Maria Dominguez', 'do they have the right names?'
     assert sum([student.age for student in [minh, maria, sam]]) == 36, 'Are their ages correct?'
+    assert [minh.name, maria.name, sam.name] == ['Minh Hoang', 'Maria Dominguez',
+                                                 'Sam Hopkins'], 'do they have the right names?'
 
 
 def exercise_5_grading(School, test_school):
@@ -190,10 +194,20 @@ def exercise_5_grading(School, test_school):
     assert len(test_school.students) == 0, 'What are students doing in this school?'
     assert hasattr(School, '__init__'), 'Where is the __init__?'
     assert hasattr(School, 'accept_student'), 'We cannot accept students?'
-    assert 'self' in str(inspect.signature(School.__init__)), 'Check the self in your __init__'
-    assert 'self' in str(inspect.signature(School.accept_student)), 'Check the self in your methods'
-    test_school.accept_student('Tina Fey')
+
+    sig = inspect.signature(School.__init__)
+    for key in 'self', 'name':
+        assert key in sig.parameters.keys(), 'What should your accept_student method take as arguments?'
+
+    sig = inspect.signature(School.accept_student)
+    for key in 'self', 'student':
+        assert key in sig.parameters.keys(), 'What should your accept_student method take as arguments?'
+
+    tina_fey = Student(name="Tina Fey", age=16)
+    test_school.accept_student(tina_fey)
     assert len(test_school.students) == 1, 'Failing to accept students, please investigate'
+    assert isinstance(test_school.students[0], Student), 'Tried and failed to accept a student, please investigate'
+
     sig = inspect.signature(School)
     assert len(sig.parameters.keys()) == 1, 'Only expected one parameter to instanciate'
     assert list(sig.parameters.keys())[0] == 'name', 'Expected the school to have a name'
@@ -231,27 +245,48 @@ def exercise_6_grading(HighSchool, happy_highschool):
 
 
 def exercise_7_grading(Employee, Company):
+    # testing creation of employees
+    test_employee = Employee(name='test employee', salary=2)
+    assert (test_employee.name == 'test employee') and (test_employee.salary == 2), 'problems creating employees'
+
+    # testing creation of companies and hiring
+    test_company = Company(name='test company')
+    assert (test_company.name == 'test company') and (
+            test_company.list_of_employees == []), 'problems creating companies'
+
+    test_company.give_a_raise(test_employee, .2)
+    assert test_employee.salary == 2.4, 'You may have an issue with your give_a_raise function'
+
+    # testing methods
+    test_company = Company(name='test company')
     test_employee = Employee(name='test employee', salary=2)
     test_employee_2 = Employee(name='test employee 2', salary=4)
-    test_company = Company(name='test company')
-
-    assert (test_employee.name == 'test employee') and (test_employee.salary == 2), 'problems creating employees'
-    assert (test_company.name == 'test company') and (
-                test_company.list_of_employees == []), 'problems creating companies'
-
     test_company.hire(test_employee)
     test_company.hire(test_employee_2)
+    assert len(test_company.list_of_employees) == 2, 'You may have a problem with your hire method'
     test_company.give_everyone_a_raise(raise_fraction=.4)
     test_company.give_everyone_a_raise(raise_fraction=.6)
     assert hasattr(test_company, 'give_everyone_a_raise'), 'Expected method give_everyone_a_raise in Company'
     assert hasattr(test_company, 'give_a_raise'), 'Expected method give_a_raise in Company'
-    assert round(test_company.get_mean_salary(), 1) == 6.7, 'The mean salary is not correct after 2 different raises'
+
+    big_help = """\n
+    The mean salary is not correct after 2 different raises.
+    
+    You are close, so we'll help you out with a big clue: 
+        - create a company 
+        - hire two employees, one with a salary of 50, and another of 30 
+        - give everyone a raise of .2, and then again of .7 
+        - the mean salary should be 81.6   
+    
+    We hope that helps! 
+    """
+
+    assert round(test_company.get_mean_salary(), 1) == 6.7, big_help
     source = inspect.getsource(Company.give_everyone_a_raise)
     assert "self.give_a_raise(" in source, 'We expect you to use the .give_a_raise method in the give_everyone_a_raise method'
 
 
 def exercise_8_grading(generous_company, stingy_company, Employee):
-
     assert "Generous" in generous_company.name
     assert "Burns" in stingy_company.name
 
