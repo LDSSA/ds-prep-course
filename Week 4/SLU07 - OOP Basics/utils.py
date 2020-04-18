@@ -136,6 +136,10 @@ def exercise_3_grading(my_basket, toilet_paper):
     assert total_value_in_basket <= 35, 'The basket is too expensive!'
     assert total_value_in_basket >= 30, 'The basket is not expensive enough!'
 
+    for item in my_basket.content:
+        if item.days_until_expired < 8:
+            raise ValueError('There is something in your basket that will expire soon!')
+
     with Capturing() as output:
         my_basket.examine_basket()
     fruit_options = ['apples', 'pears', 'oranges', 'tangerines', 'bananas']
