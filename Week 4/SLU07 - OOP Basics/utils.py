@@ -13,30 +13,6 @@ class Fruit:
         return self.nr_units * self.price_per_unit
 
 
-class Basket:
-    def __init__(self):
-        self.products = []
-
-    def calculate_basket_price(self):
-        price = 0
-        for product in self.products:
-            price += product.calculate_price()
-        return price
-
-    def show_content(self):
-        for product in self.products:
-            print("{0}: {1}".format(product.name, product.nr_units))
-        return self
-
-    def put_in_basket(self, product):
-        product_in_basket = self._find_product_in_basket(product)
-        if product_in_basket:
-            product_in_basket.nr_units += product.nr_units
-        else:
-            self.products.append(product)
-        return self
-
-
 def get_fruits():
     apples = Fruit(name='apples',
                    price_per_unit=1,
@@ -54,6 +30,7 @@ def get_fruits():
                     days_until_expired=20)
 
     return apples, bananas, oranges
+
 
 
 class Basket:
@@ -213,20 +190,20 @@ def exercise_5_grading(School, test_school):
     assert list(sig.parameters.keys())[0] == 'name', 'Expected the school to have a name'
 
 
-def exercise_6_grading(HighSchool, happy_highschool):
-    assert hasattr(HighSchool, '__init__')
-    assert hasattr(HighSchool, 'consider_student_application')
-    assert hasattr(HighSchool, 'accept_student')
-    assert hasattr(HighSchool, 'show_all_students')
+def exercise_6_grading(Highschool, happy_highschool):
+    assert hasattr(Highschool, '__init__')
+    assert hasattr(Highschool, 'consider_student_application')
+    assert hasattr(Highschool, 'accept_student')
+    assert hasattr(Highschool, 'show_all_students')
 
-    sig = inspect.signature(HighSchool)
+    sig = inspect.signature(Highschool)
     assert len(sig.parameters.keys()) == 1, 'Only expected one parameter to instanciate'
     assert list(sig.parameters.keys())[0] == 'name', 'Expected the Highschool to have a name'
-    assert 'self' in str(inspect.signature(HighSchool.__init__)), 'Check the self in your __init__'
-    assert 'self' in str(inspect.signature(HighSchool.accept_student)), 'Check the self in your accept_student'
+    assert 'self' in str(inspect.signature(Highschool.__init__)), 'Check the self in your __init__'
+    assert 'self' in str(inspect.signature(Highschool.accept_student)), 'Check the self in your accept_student'
     assert 'self' in str(
-        inspect.signature(HighSchool.consider_student_application)), 'Check the self in consider_student_application'
-    assert 'self' in str(inspect.signature(HighSchool.show_all_students)), 'Check the self in your show_all_students'
+        inspect.signature(Highschool.consider_student_application)), 'Check the self in consider_student_application'
+    assert 'self' in str(inspect.signature(Highschool.show_all_students)), 'Check the self in your show_all_students'
 
     assert happy_highschool.name == 'The happy highschool', 'Is the happy_highschool named correctly?'
     with Capturing() as output:
