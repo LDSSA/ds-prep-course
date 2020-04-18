@@ -9,6 +9,7 @@ class Fruit:
         self.price_per_unit = price_per_unit
         self.days_until_expired = days_until_expired
 
+
     def calculate_price(self):
         return self.nr_units * self.price_per_unit
 
@@ -30,7 +31,6 @@ def get_fruits():
                     days_until_expired=20)
 
     return apples, bananas, oranges
-
 
 
 class Basket:
@@ -117,8 +117,8 @@ def exercise_2_grading(calculate_price_of_all_fruits):
     apples, bananas, oranges = get_fruits()
     source = inspect.getsource(calculate_price_of_all_fruits)
     assert "return" in source, 'Did you forget to return?'
-    assert ".calculate_price()" in source, 'We want you to use the .calculate_price method'
-    assert "28" not in source, 'No answers in the function please'
+    assert ".calculate_price()" in source, 'We want you to use the .calculate_price method. Maybe you did the multiplication by hand instead?'
+    assert "28" not in source, 'No answers in the function please. Sneaky sneaky.'
 
     assert calculate_price_of_all_fruits(
         [apples, bananas]), 'Tried running, but got nothing back. Are you returning anything?'
@@ -260,7 +260,11 @@ def exercise_7_grading(Employee, Company):
 
     assert round(test_company.get_mean_salary(), 1) == 6.7, big_help
     source = inspect.getsource(Company.give_everyone_a_raise)
-    assert "self.give_a_raise(" in source, 'We expect you to use the .give_a_raise method in the give_everyone_a_raise method'
+
+    error_msg = (
+        'We expect you to use the give_a_raise method inside the give_everyone_a_raise method. ' +
+        '\nHint: review the last section of notebook 3.')
+    assert "self.give_a_raise(" in source, error_msg
 
 
 def exercise_8_grading(generous_company, stingy_company, Employee):
