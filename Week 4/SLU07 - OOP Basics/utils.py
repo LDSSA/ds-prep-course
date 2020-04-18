@@ -104,13 +104,17 @@ class Student:
 
 
 def exercise_1_grading(pears, tangerines):
-    assert isinstance(pears, Fruit)
-    assert isinstance(tangerines, Fruit)
-    assert pears.price_per_unit * pears.nr_units == 12
-    assert tangerines.price_per_unit * tangerines.nr_units == 12
-    assert tangerines.nr_units == 2
+    for f in [pears, tangerines]:
+        assert isinstance(f, Fruit)
+    assert pears.price_per_unit == 3
+    assert pears.name == 'pears'
+    assert pears.nr_units == 4
+    assert pears.days_until_expired == 14
+
+    assert tangerines.price_per_unit == 6
     assert tangerines.name == 'tangerines'
-    assert pears.days_until_expired + tangerines.days_until_expired == 16
+    assert tangerines.nr_units == 2
+    assert tangerines.days_until_expired == 2
 
 
 def exercise_2_grading(calculate_price_of_all_fruits):
