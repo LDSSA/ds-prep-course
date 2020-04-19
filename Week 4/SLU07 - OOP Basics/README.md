@@ -1,4 +1,4 @@
-SLU07 - OOP Basics 
+# SLU07 - OOP Basics 
 
 Objects are a fascinating part of Python, and will allow you to build powerful things, while keeping complexity manageable. 
 In this SLU you will learn the basics of Object Oriented Programming (OOP) 
