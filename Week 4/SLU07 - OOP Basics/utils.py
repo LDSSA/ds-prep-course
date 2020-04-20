@@ -238,7 +238,7 @@ def exercise_7_grading(Employee, Company):
     test_company = Company(name='test company')
     assert (test_company.name == 'test company') and (
             test_company.list_of_employees == []), 'problems creating companies'
-    test_company.hire(test_employee),  'You may have a problem with your hire method'
+    test_company.hire(test_employee)
     test_company.give_a_raise(test_employee, .2)
     assert test_employee.salary == 2.4, 'You may have an issue with your give_a_raise function'
 
