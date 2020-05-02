@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
 from PIL import Image
+import time  # python module with time-related functions
 
 
 
@@ -52,6 +53,45 @@ def plot_school_functions():
         
         # increment index for next function name
         function_index += 1
+
+
+# simulation - perform linear combination using Python lists
+def lincomb_numpy():
+    
+    m = 1000000
+    
+    # simulation start time
+    start_time = time.time()
+    
+    # create two vectors with m entries (we'll learn about arrays next)
+    u = np.zeros(m)
+    v = np.ones(m)
+    
+    # perform a linear combination
+    w_array = 2*u + 2*v
+    
+    # simulation duration
+    return time.time() - start_time
+
+
+# simulation - perform linear combination using NumPy arrays
+def lincomb_lists():
+    
+    m = 1000000
+    
+    # simulation start time
+    start_time = time.time()
+    
+    # create vector with m entries using list comprehension
+    u = [0 for i in range(m)]
+    v = [1 for j in range(m)]
+    
+    # perform a linear combination
+    w_list = [2*uu + 2*vv for (uu, vv) in zip(u, v)]
+    
+    # simulation duration
+    return time.time() - start_time
+    
 
         
 # load panda
