@@ -15,7 +15,7 @@ There are 2 optional sections, namely systems of linear equations and eigenvalue
 Some of the functionalities of NumPy you'll learn about:
 - [numpy.matmul()](https://numpy.org/doc/1.18/reference/generated/numpy.matmul.html)
 - [numpy.linalg.inv()](https://numpy.org/doc/1.18/reference/generated/numpy.linalg.inv.html)
-- [numpy.max()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.max.html)
-- [numpy.min()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.min.html)
-- [numpy.sum()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.sum.html)
-- [numpy.sort()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.sort.html)
+- [numpy.ndarray.max()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.max.html)
+- [numpy.ndarray.min()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.min.html)
+- [numpy.ndarray.sum()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.sum.html)
+- [numpy.ndarray.sort()](https://numpy.org/doc/1.18/reference/generated/numpy.ndarray.sort.html)
