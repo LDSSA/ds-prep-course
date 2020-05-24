@@ -1,3 +1,7 @@
 # SLU 15
 
-TBD
+TicTacToe
+
+- Debugging tips
+- Principles to write good code
+- Testing

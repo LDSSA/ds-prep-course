@@ -316,6 +316,13 @@ class TestTicTacToe(unittest.TestCase):
                 wrong Return type. Your function needs to return a list
             """
         )
+        self.assertGreater(
+            len(game.get_empty_positions()),
+            0,
+            msg="""
+                The empty positions array is empty. It should have 9 elements.
+            """
+        )
         self.assertEqual(
             type(game.get_empty_positions()[0]),
             tuple,
