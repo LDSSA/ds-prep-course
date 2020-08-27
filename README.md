@@ -461,6 +461,12 @@ Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science
 
 ### Troubleshooting
 
+1. [When I open Windows Explorer through Ubuntu, it goes to a different folder than in the guide](#When-I-open-Windows-Explorer-through-Ubuntu,-it-goes-to-a-different-folder-than-in-the-guide)
+1. [Tips and Tricks](#Tips-and-Tricks)
+1. [When I pull from the `ds prep course` repository, I get an error](#When-I-pull-from-the-ds-prep-course-repository,-I-get-the-error)
+1. [When I try to open `jupyter notebook`, I get an error](#When-I-try-to-open-jupyter-notebook,-I-get-the-error)
+1. [When I use the `cp` command the `>` sign appears and the command does not execute](#When-I-use-the-`cp`-command-the->-sign-appears-and-the-command-does-not-execute)
+
 #### When I open Windows Explorer through Ubuntu, it goes to a different folder than in the guide
 
 * Please make sure:
@@ -471,6 +477,54 @@ Please refer to [this wiki page](https://github.com/LDSSA/wiki/wiki/Data-Science
 
 * First please make sure you are running Windows 10 version `1909` or newer.
 * Then, try following [these steps](https://teckangaroo.com/enable-windows-10-virtual-machine-platform/)
+
+#### When I pull from the `ds-prep-course` repository, I get the error:
+
+```
+error: Your local changes to the following files would be overwritten by merge:  
+<some files>
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+_git_ is telling us that changes were made by you to the files on the `~/projects/ds-prep-course` folder, and is not pulling the changes made by the instructors because they would override the changes that you made there. To fix this do the following:
+1. make sure that any change you made to the files on `~/projects/ds-prep-course`  (that you want to not lose) is saved in your `~/projects/ds-prep-workspace` repository (see https://github.com/LDSSA/ds-prep-course#updates-to-learning-units for how to do this), and if you don't want to keep the changes you made to these files, just continue on to the next step
+2. go to the `~/projects/ds-prep-course` folder and run: 
+
+    ```
+    cd ~/projects/ds-prep-course 
+    git stash
+    ```
+
+3. now you can pull from the `ds-prep-course` repository:
+
+    ```
+    git pull
+    ```
+
+#### When I try to open `jupyter notebook`, I get the error:
+
+```
+migs-MBP% jupyter notebook
+zsh: command not found: jupyter
+```
+
+Before opening `jupyter notebook` activate your virtual environment:
+
+```
+source ~/.virtualenvs/prep-venv/bin/activate
+```
+
+#### When I use the `cp` command the `>` sign appears and the command does not execute
+
+```
+cp -r ~/projects/ds-prep-course/“Week 0" ds-prep-workspace
+>
+```
+
+Make sure to use this type of quotes `"` and not these ones `“`.
+
+#### My problem is not listed here, what should I do?
 
 If the above steps didn't solve the problem for you, please contact us on Slack or if you are not on slack, [open an issue](https://guides.github.com/features/issues/)
 
